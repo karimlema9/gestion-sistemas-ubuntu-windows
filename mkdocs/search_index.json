@@ -1,0 +1,99 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Benvinguts a MkDocs\n\n\nAqui mostrarem diferents exmples que utilitzarem per documentar una practica.\n\n\nTitols\n\n\nAra mostrarem diferents tipus de titols.\n\n\nTitol1\n\n\nTitol 2\n\n\nTitol 3\n\n\nTitol 4\n\n\nTitol 5\n\n\nTitol 6\n\n\nTamb\u00e9 hi ha diferents tipus de \nnegreta\n.\n\nCom \nels\n de \nl'exemple\n, de \ncursiva\n tamb\u00e9 hi ha \ndiferents\n tipus i es poden \ncomvinar els dos tipus\n.  \n\n\n\n\nBlockquotes\n\n\n\n\nParagraf1 Blockquotes  \n\n\nParagraf2 \nBlockquotes\n  \n\n\n\n\nParagraf3 \nBlockquotes\n  \n\n\n\n\n\n\n\n\n\n\n\n\nLlistes\n\n\n\n\nFirst item\n\n\nSecond item\n\n\nThird item\n\n\nFourth item\n\n\nSegix igual fiques el numero que fiques, si no estan separat per algo.\n\n\nSecond item\n\n\nThird item\n\n\nFourth item\n\n\nFirst item\n\n\nSecond item\n\n\nThird item\n\n\nIndented item\n\n\nIndented item\n\n\n\n\n\n\nFourth item\n\n\n\n\nLlistes desordenades\n\n\n\n\nFirst item\n\n\nSecond item\n\n\nThird item\n\n\nIndented item\n\n\nIndented item\n\n\n\n\n\n\nFourth item\n\n\n\n\nInserint Codi\n\n\n\n\nOpen the file.\n\n\n\n\nFind the following code block on line 21:\n\n\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n\n\n\n\n\n\n\nUpdate the title to match the name of your website.\n\n\n\n\n\n\nImatges\n\n\n\n\nCreatet by \nkarimlema9\n.\n\n\nComenta `dins` de comentat\n.\n\n\nkarim\n\n\n\n\nkarim\n\n\nkarim\n\n\n\n\nExempmple link a GOOGLE.\n\n\nExempmple link a GOOGLE amb cometari si el ratoli esta dalt.\n  \n\n\nContacte\n\n\nabdelkarimlemaallam@iesebre.com\n\n\n* Caracters especials com - _ `.",
+            "title": "Home"
+        },
+        {
+            "location": "/#benvinguts-a-mkdocs",
+            "text": "Aqui mostrarem diferents exmples que utilitzarem per documentar una practica.",
+            "title": "Benvinguts a MkDocs"
+        },
+        {
+            "location": "/#titols",
+            "text": "Ara mostrarem diferents tipus de titols.",
+            "title": "Titols"
+        },
+        {
+            "location": "/#titol1",
+            "text": "",
+            "title": "Titol1"
+        },
+        {
+            "location": "/#titol-2",
+            "text": "",
+            "title": "Titol 2"
+        },
+        {
+            "location": "/#titol-3",
+            "text": "",
+            "title": "Titol 3"
+        },
+        {
+            "location": "/#titol-4",
+            "text": "",
+            "title": "Titol 4"
+        },
+        {
+            "location": "/#titol-5",
+            "text": "",
+            "title": "Titol 5"
+        },
+        {
+            "location": "/#titol-6",
+            "text": "Tamb\u00e9 hi ha diferents tipus de  negreta . \nCom  els  de  l'exemple , de  cursiva  tamb\u00e9 hi ha  diferents  tipus i es poden  comvinar els dos tipus .",
+            "title": "Titol 6"
+        },
+        {
+            "location": "/#blockquotes",
+            "text": "Paragraf1 Blockquotes    Paragraf2  Blockquotes      Paragraf3  Blockquotes",
+            "title": "Blockquotes"
+        },
+        {
+            "location": "/#llistes",
+            "text": "First item  Second item  Third item  Fourth item  Segix igual fiques el numero que fiques, si no estan separat per algo.  Second item  Third item  Fourth item  First item  Second item  Third item  Indented item  Indented item    Fourth item",
+            "title": "Llistes"
+        },
+        {
+            "location": "/#llistes-desordenades",
+            "text": "First item  Second item  Third item  Indented item  Indented item    Fourth item",
+            "title": "Llistes desordenades"
+        },
+        {
+            "location": "/#inserint-codi",
+            "text": "Open the file.   Find the following code block on line 21:  <html>\n  <head>\n    <title>Test</title>\n  </head>    Update the title to match the name of your website.",
+            "title": "Inserint Codi"
+        },
+        {
+            "location": "/#imatges",
+            "text": "Createt by  karimlema9 .  Comenta `dins` de comentat .  karim",
+            "title": "Imatges"
+        },
+        {
+            "location": "/#karim",
+            "text": "karim   Exempmple link a GOOGLE.  Exempmple link a GOOGLE amb cometari si el ratoli esta dalt.",
+            "title": "karim"
+        },
+        {
+            "location": "/#contacte",
+            "text": "abdelkarimlemaallam@iesebre.com  * Caracters especials com - _ `.",
+            "title": "Contacte"
+        },
+        {
+            "location": "/JL/",
+            "text": "Benvinguts a MkDocs\n\n\nAqui mostrarem diferents exmples que utilitzarem per documentar una practica.\n\n\nAquesta es la pagina 2.",
+            "title": "JL"
+        },
+        {
+            "location": "/JL/#benvinguts-a-mkdocs",
+            "text": "Aqui mostrarem diferents exmples que utilitzarem per documentar una practica.",
+            "title": "Benvinguts a MkDocs"
+        },
+        {
+            "location": "/JL/#aquesta-es-la-pagina-2",
+            "text": "",
+            "title": "Aquesta es la pagina 2."
+        }
+    ]
+}
