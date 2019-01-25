@@ -31,27 +31,11 @@
 
         <!-- Collapsed navigation -->
         <div class="navbar-header">
-            <!-- Expander button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
             <a class="navbar-brand" href=".">Abdelkarim Lemaallam</a>
         </div>
 
         <!-- Expanded navigation -->
         <div class="navbar-collapse collapse">
-                <!-- Main navigation -->
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href=".">Home</a>
-                    </li>
-                    <li >
-                        <a href="Activitat 1/">Activitat 1</a>
-                    </li>
-                </ul>
 
             <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -59,16 +43,6 @@
                         <i class="fa fa-search"></i> Search
                     </a>
                 </li>
-                    <li class="disabled">
-                        <a rel="next" >
-                            <i class="fa fa-arrow-left"></i> Previous
-                        </a>
-                    </li>
-                    <li >
-                        <a rel="prev" href="Activitat 1/">
-                            Next <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </li>
             </ul>
         </div>
     </div>
@@ -77,19 +51,20 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#activitat-1-windows">Activitat 1 - Windows</a></li>
-            <li><a href="#windows-server-12-gui">Windows Server 12 - GUI</a></li>
-            <li><a href="#1-installa-un-servidor-windows-server-2012-amb-gui-i">1. Instal·la un servidor Windows Server 2012 amb GUI i:</a></li>
-            <li><a href="#2-installa-un-servidor-windows-server-2012-sense-gui-amb-mode-core-i">2. Instal·la un servidor Windows Server 2012 sense GUI amb mode Core i:</a></li>
-            <li><a href="#3-ara-que-ja-tens-copies-de-les-maquines-anem-a-fer-unes-proves">3. Ara que ja tens còpies de les màquines anem a fer unes proves</a></li>
-            <li><a href="#4-un-cop-estigui-fet-el-punt-3-llancarem-les-dues-maquines-i-recuperarem-les-installacions-dels-punts-1-i-2-per-a-seguir-treballant-en-les-seguents-practiques">4. Un cop estigui fet el punt 3, llançarem les dues màquines i recuperarem les instal·lacions dels punts 1 i 2 per a seguir treballant en les següents pràctiques</a></li>
+        <li class="main active"><a href="#windows-server-12-gui-i-core">Windows Server 12 - GUI i Core</a></li>
+        <li class="main "><a href="#1-passos-previs">1. Passos previs</a></li>
+            <li><a href="#11-installa-un-servidor-windows-server-2012-amb-gui-i">1.1 Instal·la un servidor Windows Server 2012 amb GUI i:</a></li>
+        <li class="main "><a href="#2-installa-un-servidor-windows-server-2012-sense-gui-amb-mode-core-i">2. Instal·la un servidor Windows Server 2012 sense GUI amb mode Core i:</a></li>
+        <li class="main "><a href="#3-treure-una-interficie-grafica-del-servidor-gui">3. Treure una interficie gràfica del servidor GUI</a></li>
+        <li class="main "><a href="#4-installa-una-interficie-grafica-al-servidor-core">4. Instal·la una interficie gràfica al servidor Core</a></li>
+        <li class="main "><a href="#5-copies-de-seguretat-dels-servidors-windows-2012">5. Copies de seguretat dels servidors Windows 2012</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="activitat-1-windows">Activitat 1 - Windows</h1>
-<h2 id="windows-server-12-gui">Windows Server 12 - GUI</h2>
-<h2 id="1-installa-un-servidor-windows-server-2012-amb-gui-i">1. Instal·la un servidor Windows Server 2012 amb GUI i:</h2>
+<h2 id="windows-server-12-gui-i-core">Windows Server 12 - GUI i Core</h2>
+<h2 id="1-passos-previs">1. Passos previs</h2>
+<h3 id="11-installa-un-servidor-windows-server-2012-amb-gui-i">1.1 Instal·la un servidor Windows Server 2012 amb GUI i:</h3>
 <blockquote>
 <p>1.1 Modifica el nom del servidor<br />
 1.2 Posa una ip fixa<br />
@@ -144,7 +119,7 @@
 2. Un cop reiniciat fem una <code>còpia de seguretat</code> fent una instantanea amb <code>VirtualBox</code>.</p>
 </blockquote>
 </blockquote>
-<h2 id="3-ara-que-ja-tens-copies-de-les-maquines-anem-a-fer-unes-proves">3. Ara que ja tens còpies de les màquines anem a fer unes proves</h2>
+<h2 id="3-treure-una-interficie-grafica-del-servidor-gui">3. Treure una interficie gràfica del servidor GUI</h2>
 <blockquote>
 <p><strong>3.1. Treure la interfície Shell de la màquina amb GUI, o sigui, deixar només una interfície molt bàsica (has de fer-ho mitjançant l’opció de “Quitar roles y características”)</strong>  </p>
 <blockquote>
@@ -159,10 +134,15 @@ Ara seleccionem l'opcio de reinici automatic i seguim amb el process.
 Ara hem desperar a que es carregue el process.
 <img alt="img" src="./img/Selecció_011.png" /><br />
 Un cop reiniciat ja podrem gaudir del nostre servidor sense part Grafica.
-<img alt="img" src="./img/Selecció_012.png" /><br />
-<strong>3.2. Afegir una interfície molt bàsica a la màquina amb Core (a continuació tens les passes a seguir)</strong><br />
-<strong>3.2.1. Afegim la .iso del server</strong>  </p>
-<p><img alt="img" src="./img/Selecció_013.png" /><br />
+<img alt="img" src="./img/Selecció_012.png" />  </p>
+</blockquote>
+</blockquote>
+<h2 id="4-installa-una-interficie-grafica-al-servidor-core">4. Instal·la una interficie gràfica al servidor Core</h2>
+<blockquote>
+<p><strong>3.2. Afegir una interfície molt bàsica a la màquina amb Core (a continuació tens les passes a seguir)</strong>  </p>
+<blockquote>
+<p><strong>3.2.1. Afegim la .iso del server</strong><br />
+<img alt="img" src="./img/Selecció_013.png" /><br />
 <strong>3.2.2. Executem powershell</strong><br />
 <img alt="img" src="./img/Selecció_014.png" /><br />
 <strong>3.2.3. mkdir C:\wim</strong><br />
@@ -178,7 +158,7 @@ Un cop reiniciat ja podrem gaudir del nostre servidor sense part Grafica.
 Reiniciem i comprobem que ja esta instal·lat.</p>
 </blockquote>
 </blockquote>
-<h2 id="4-un-cop-estigui-fet-el-punt-3-llancarem-les-dues-maquines-i-recuperarem-les-installacions-dels-punts-1-i-2-per-a-seguir-treballant-en-les-seguents-practiques">4. Un cop estigui fet el punt 3, llançarem les dues màquines i recuperarem les instal·lacions dels punts 1 i 2 per a seguir treballant en les següents pràctiques</h2></div>
+<h2 id="5-copies-de-seguretat-dels-servidors-windows-2012">5. Copies de seguretat dels servidors Windows 2012</h2></div>
         </div>
 
         <footer class="col-md-12">
@@ -217,5 +197,5 @@ Reiniciem i comprobem que ja esta instal·lat.</p>
 
 <!--
 MkDocs version : 0.16.3
-Build Date UTC : 2019-01-24 19:46:24
+Build Date UTC : 2019-01-25 12:20:33
 -->
