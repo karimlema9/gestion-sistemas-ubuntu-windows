@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Windows - Abdelkarim Lemaallam</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Windows";
+    var mkdocs_page_input_path = "Windows.md";
+    var mkdocs_page_url = "/Windows/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Abdelkarim Lemaallam</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Ubuntu/">Ubuntu</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Windows</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#instala-windows-server-12-gui-i-core">Insta·la Windows Server 12 - GUI i Core</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#1-installa-un-servidor-windows-server-2012-amb-gui-i">1 Instal·la un servidor Windows Server 2012 amb GUI i:</a></li>
+        
+            <li><a class="toctree-l3" href="#2-installa-un-servidor-windows-server-2012-sense-gui-amb-mode-core-i">2. Instal·la un servidor Windows Server 2012 sense GUI amb mode Core i:</a></li>
+        
+            <li><a class="toctree-l3" href="#3-treure-una-interficie-grafica-del-servidor-gui">3. Treure una interficie gràfica del servidor GUI</a></li>
+        
+            <li><a class="toctree-l3" href="#4-installa-una-interficie-grafica-al-servidor-core">4. Instal·la una interficie gràfica al servidor Core</a></li>
+        
+            <li><a class="toctree-l3" href="#5-copies-de-seguretat-dels-servidors-windows-2012">5. Copies de seguretat dels servidors Windows 2012</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#administracio-de-dominis-w12-gui">Administració de Dominis W12 - GUI</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#1-creacio-de-un-bosc-en-un-domini">1. Creació de un bosc en un domini</a></li>
+        
+            <li><a class="toctree-l3" href="#2-crear-una-uo-amb-grups-i-isuaris">2. Crear una UO amb grups i isuaris</a></li>
+        
+            <li><a class="toctree-l3" href="#3-modificacio-de-les-directives">3. Modificació de les directives</a></li>
+        
+            <li><a class="toctree-l3" href="#4-creacio-de-grups-i-usuaris">4. Creació de Grups i Usuaris</a></li>
+        
+            <li><a class="toctree-l3" href="#5-unir-un-equip-a-un-domini">5. Unir un equip a un Domini</a></li>
+        
+            <li><a class="toctree-l3" href="#6-establir-un-horari-de-connectivitat">6. Establir un horari de connectivitat</a></li>
+        
+            <li><a class="toctree-l3" href="#7-convertir-un-usuari-local-en-administrador">7. Convertir un usuari local en Administrador</a></li>
+        
+            <li><a class="toctree-l3" href="#8-carpetes-compartides-amb-diferents-metodes">8. Carpetes compartides amb diferents metodes</a></li>
+        
+            <li><a class="toctree-l3" href="#9-creacio-dun-perfil-mobil">9. Creació dun perfil mòbil</a></li>
+        
+            <li><a class="toctree-l3" href="#10-perfils-oabligatoris">10 Perfils oabligatoris</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Abdelkarim Lemaallam</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Windows</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="instala-windows-server-12-gui-i-core">Insta·la Windows Server 12 - GUI i Core</h2>
+<h3 id="1-installa-un-servidor-windows-server-2012-amb-gui-i">1 Instal·la un servidor Windows Server 2012 amb GUI i:</h3>
+<blockquote>
+<pre><code>1.1 Modifica el nom del servidor  
+1.2 Posa una ip fixa  
+1.3 Actualitza el sistema  
+1.4 Desactiva les actualitzacions  
+1.5 Treu les icones típiques de l'escriptori  
+1.6 Instal·la les guestadditions  
+1.7 Desactiva el firewall  
+1.8 Comprova que la zona horària sigui la correcta  
+1.9 Reinicia la màquina i FES-TE UNA CÒPIA DE SEGURETAT
+</code></pre>
+</blockquote>
+<h3 id="2-installa-un-servidor-windows-server-2012-sense-gui-amb-mode-core-i">2. Instal·la un servidor Windows Server 2012 sense GUI amb mode Core i:</h3>
+<blockquote>
+<p><strong>2.1. Modifica el nom del servidor</strong>  </p>
+<blockquote>
+<p>Ara editarem diferents apartats del servidor Windows 2012 amb la comanda<strong><code>sconfig</code></strong>.
+<img alt="img" src="../img/Selecció_001.png" />
+1. Cal seleccionar el numero <strong>2</strong> per accedir a les opcions de cambiar el nom dels Servidor.<br />
+2. Despres ja podem escriure el nou nom <code>KARIM-SERVER</code> del servidor i reiniciem l'equip per a que s'apliquen els canvis.<br />
+<img alt="img" src="../img/Selecció_002.png" /></p>
+</blockquote>
+<p><strong>2.2. Posa una ip fixa</strong>  </p>
+<blockquote>
+<p>Ara afegirem una nova <strong>IP</strong> estatica utilitzant la comanda <strong><code>sconfig</code></strong>.<br />
+<img alt="img" src="../img/Selecció_003.png" /><br />
+1. En primer lloc seleccionem el numero <strong>8</strong> per entrar a les opcions de <code>red</code>.<br />
+2. Despres seleccionem el numero <strong>10</strong> el qual serveix per indica el numero de de index de l'adaptador.<br />
+3. Ara cal indicar el numero <strong>1</strong> per indicar que volem establir una nova <strong>IP</strong>.<br />
+4. En aquest punt seleccionem <code>e</code> per indicar que volem afegir una <strong>IP</strong> estatica.<br />
+5. En l'ultim punt ja podrem observar com s'ha canviat la <strong>IP</strong> nova.  </p>
+</blockquote>
+<p><strong>2.3. Desactiva les actualitzacions</strong>  </p>
+<blockquote>
+<p>Ara desactivarem el <code>firewall</code> utilitzant la comanda <strong><code>sconfig</code></strong>.<br />
+<img alt="img" src="../img/Selecció_004.png" />
+1. Començem seleccionant el numero <strong>5</strong> per accedir a les opcions de actualitzacions.<br />
+2. Despres seleccionem <code>m</code> per indicar que les actualizacions siguen manuals i no automatiques.</p>
+</blockquote>
+<p><strong>2.4. Comprova que la zona horària sigui la correcta</strong>  </p>
+<blockquote>
+<p>Ara comprovarem que la zona horària sigui la correcta utilitzant la comanda <strong><code>sconfig</code></strong>.<br />
+<img alt="img" src="../img/Selecció_005.png" />
+1. Per poder comprovar la zona horaria cal seleccionar el numero <strong>9</strong>.<br />
+2. Un cop seleccionat el numero corresponent ens surtira el rellotge hi ho podrem comprovar.</p>
+</blockquote>
+<p><strong>2.5. Reinicia la màquina i FES-TE UNA CÒPIA DE SEGURETAT</strong>  </p>
+<blockquote>
+<p>Ara reiniciarem el servidor utilitzant la comanda <strong><code>sconfig</code></strong>.<br />
+<img alt="img" src="../img/Selecció_007.png" /><br />
+1. Seleccionarem el numero <strong>13</strong> que serveix per reiniciar el servidor.
+<img alt="img" src="../img/Selecció_006.png" /><br />
+2. Un cop reiniciat fem una <code>còpia de seguretat</code> fent una instantanea amb <code>VirtualBox</code>.</p>
+</blockquote>
+</blockquote>
+<h3 id="3-treure-una-interficie-grafica-del-servidor-gui">3. Treure una interficie gràfica del servidor GUI</h3>
+<blockquote>
+<p><strong>3.1. Treure la interfície Shell de la màquina amb GUI, o sigui, deixar només una interfície molt bàsica (has de fer-ho mitjançant l’opció de “Quitar roles y características”)</strong>  </p>
+<blockquote>
+<p>En primer lloc seleccionem l'opció de <code>Quitar roles y funciones</code> que estroba a la part superior dins de <code>Administrar</code>.<br />
+<img alt="img" src="../img/Selecció_008.png" /><br />
+1. Despres anem a l'apartat <code>Caracteristicas</code>.<br />
+2. Un cop dins deseleccionem l'opcio <code>Windows PowerShell</code>.<br />
+3. Ara ja podem seleccionar <code>Quitar caracteristica</code> per treure-la.
+<img alt="img" src="../img/Selecció_009.png" /><br />
+Ara seleccionem l'opcio de reinici automatic i seguim amb el process.
+<img alt="img" src="../img/Selecció_010.png" /><br />
+Ara hem desperar a que es carregue el process.
+<img alt="img" src="../img/Selecció_011.png" /><br />
+Un cop reiniciat ja podrem gaudir del nostre servidor sense part Grafica.
+<img alt="img" src="../img/Selecció_012.png" />  </p>
+</blockquote>
+</blockquote>
+<h3 id="4-installa-una-interficie-grafica-al-servidor-core">4. Instal·la una interficie gràfica al servidor Core</h3>
+<blockquote>
+<p><strong>3.2. Afegir una interfície molt bàsica a la màquina amb Core (a continuació tens les passes a seguir)</strong>  </p>
+<blockquote>
+<p><strong>3.2.1. Afegim la .iso del server</strong><br />
+<img alt="img" src="../img/Selecció_013.png" /><br />
+<strong>3.2.2. Executem powershell</strong><br />
+<img alt="img" src="../img/Selecció_014.png" /><br />
+<strong>3.2.3. mkdir C:\wim</strong><br />
+<img alt="img" src="../img/Selecció_015.png" /><br />
+<strong>3.2.4. Assignem la nostra versió amb dism /get-wiminfo /wimfile:d:\sources\install.wim</strong><br />
+<img alt="img" src="../img/Selecció_016.png" /><br />
+<strong>3.2.5. Muntem  al directori creat ambdism /mount-wim /wimfile:d:\sources\install.wim /index:2 /mountdir:c:\wim /readonly</strong><br />
+<img alt="img" src="../img/Selecció_017.png" /><br />
+<strong>3.2.6. Instal·lem amb Install-WindowsFeature Server-Gui-Mgmt-Infra –Source C:\wim \Windows\WinSxS</strong><br />
+<img alt="img" src="../img/Selecció_018.png" /><br />
+<strong>3.2.7. Reiniciem amb shutdown –r –t 0</strong><br />
+<img alt="img" src="../img/Selecció_019.png" /><br />
+Reiniciem i comprobem que ja esta instal·lat.</p>
+</blockquote>
+</blockquote>
+<h3 id="5-copies-de-seguretat-dels-servidors-windows-2012">5. Copies de seguretat dels servidors Windows 2012</h3>
+<h2 id="administracio-de-dominis-w12-gui">Administració de Dominis W12 - GUI</h2>
+<h3 id="1-creacio-de-un-bosc-en-un-domini">1. Creació de un bosc en un domini</h3>
+<blockquote>
+<p><strong>1.1 Crea un nou bosc amb un nou domini. El domini s'ha de dir elteunom.cat, elteunom.com</strong></p>
+</blockquote>
+<h3 id="2-crear-una-uo-amb-grups-i-isuaris">2. Crear una UO amb grups i isuaris</h3>
+<blockquote>
+<p><strong>2.1 Crea una UO anomenada recursos_humans i dintre dos grups anomenats alumnes i professors</strong></p>
+</blockquote>
+<h3 id="3-modificacio-de-les-directives">3. Modificació de les directives</h3>
+<blockquote>
+<p><strong>3.1 Modifica les directives que fan referència a la política de paraules de pas</strong></p>
+</blockquote>
+<h3 id="4-creacio-de-grups-i-usuaris">4. Creació de Grups i Usuaris</h3>
+<blockquote>
+<p><strong>4. Crea dos usuaris dintre de cada grup, prova la política de paraules de pas establerta en el pas anterior i decideix quin poden modificar la paraula de pas, si aquesta caduca...</strong></p>
+</blockquote>
+<h3 id="5-unir-un-equip-a-un-domini">5. Unir un equip a un Domini</h3>
+<blockquote>
+<p><strong>5.1 Valida un equip client al domini</strong></p>
+<blockquote>
+<p>En primer lloc cal treure el Firewall del Servidor i de l'eqip client.
+<img alt="img" src="../img/Selecció_020.png" /><br />
+Un cop desactivat els Firellaws anem al client, i dins de les propietats de l'equip seleccionem <code>Cambiar configuración</code>.
+<img alt="img" src="../img/Selecció_021.png" /><br />
+Un cop dins de les propietats del sistema anem a l'opció <code>Cambiar...</code> .
+<img alt="img" src="../img/Selecció_022.png" /><br />
+Ara li indiquem el nom del domini que en aquest cas es <strong><code>karim.cat</code></strong> i acceptem.
+<img alt="img" src="../img/Selecció_023.png" /><br />
+Ara anem al Servidor i comprovem que l'equip s'ha unit al domini.
+<img alt="img" src="../img/Selecció_024.png" />  </p>
+</blockquote>
+</blockquote>
+<h3 id="6-establir-un-horari-de-connectivitat">6. Establir un horari de connectivitat</h3>
+<p><strong>6.1 Fes que un usuari només es pugui connectar uns dies determinats. Què passa si l’usuari està connectat i finalitza el seu temps de connexió?</strong></p>
+<h3 id="7-convertir-un-usuari-local-en-administrador">7. Convertir un usuari local en Administrador</h3>
+<p><strong>7.1 Fes que un usuari normal del domini pugui ser administrador d’un equip local. Hi ha diverses formes de fer-ho. Bàsicament és fer el mateix, però des de l’equip local o des del servidor. La diferència seria si ho ha de fer l’administrador del servidor o un usuari operador. Entre elles:</strong>  </p>
+<ol>
+<li>
+<p>Cal entrar a l’equip localment, amb un usuari que tingui permisos i dir-li que l’usuari X que pertany al domini formi part del grup d’administradors locals de l’equip.</p>
+</li>
+<li>
+<p>Des del Windows Server, clic dret a sobre l’equip i Administrar.</p>
+<blockquote>
+<p>Boto dret sobre l'equip i selecconem <code>Administrar</code>.
+<img alt="img" src="../img/Selecció_025.png" /><br />
+Ara afegirem al grup <code>Administradores</code> l'usuari <code>karim</code>.
+<img alt="img" src="../img/Selecció_026.png" /><br />
+1. El primer pas es accedir a la categoria <code>Usuarios y grupos locales</code>.<br />
+2. Ara seleccionem el grup <code>Administradores</code> boto dret i anem a Propietats.<br />
+3. Un cop dins de propipetats anem a <code>Agregar</code>.<br />
+4. Ara ja podem seleccionar el nostre usuari que en aquest cas es <code>karim</code> i guardem els canvis.  </p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<blockquote>
+<p>Comprovem que l'usuari <code>karim</code> es troba dins del grup d'administradors.
+<img alt="img" src="../img/Selecció_027.png" /><br />
+Per comprovar que l'usuari <code>karim</code> té els permissos de l'administrador anem a canviar l'hora de l'equip ja que només és pots fer amb permissos d'administrador.
+<img alt="img" src="../img/Selecció_028.png" />  </p>
+</blockquote>
+</blockquote>
+<h3 id="8-carpetes-compartides-amb-diferents-metodes">8. Carpetes compartides amb diferents metodes</h3>
+<p><strong>8.1 Carpetes dels usuaris que es connecten al domini. Quan un usuari es connecta al domini ha de tenir la seva carpeta amb els seus arxius (tot emmagatzemat al servidor, no localment) disponible d’una forma fàcil o inclús transparent per a ell. Hi ha diverses formes de fer-ho, cadascuna amb les seves avantatges i inconvenients, tres formes podrien ser:</strong></p>
+<ol>
+<li>
+<p>Una primera manera de fer-ho seria:<br />
+    1.1 Creem la carpeta de l’usuari al servidor i la compartim només per a l’usuari amb els permisos corresponents.</p>
+<ul>
+<li>Deixem Documentos igual i cerquem la carpeta per la xarxa i la connectem com a unitat de xarxa<blockquote>
+<p>Ara dins el servidor creem una carpeta compartida dins de la unitat de <code>DADES</code>.
+<img alt="img" src="../img/Selecció_029.png" /><br />
+Ara anem a les propietats de l'usuario karim dins de <code>perfil</code> a carpetes compartides afegim la lletra de la unitat de disc i la ruta de la carpeta.<br />
+<img alt="img" src="../img/Selecció_030.png" /><br />
+Ara ja podem comprovar que ja s'ha compartit la carpeta compartida.
+<img alt="img" src="../img/Selecció_031.png" />  </p>
+</blockquote>
+</li>
+<li>A l’ordinador (amb un usuari administrador) modifiquem la ruta de Documentos  <blockquote>
+<p>Anem a les propietats de la carpeta <code>documentos</code> i canviem la ruta per la careta compartida del servidor.<br />
+<img alt="img" src="../img/Selecció_032.png" />  </p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p>Una segona manera podria ser:<br />
+    2.1 Creem la carpeta de l’usuari al servidor i la compartim només per a l’usuari amb els permisos corresponents i a la fitxa de l’usuari, omplim        el camp connectar de la seva carpeta, assignem una lletra i la ruta del recurs compartit. Per exemple: <code>R: \\WIN2012\personals\%username%</code>  </p>
+<blockquote>
+<p>Creem la carpeta compartida de nom <code>Perosnal</code> i li donem permissos a l'usuari <code>karim</code>.
+<img alt="img" src="../img/Selecció_033.png" /><br />
+Ara dins de propietats de l'usuari a <code>perfil</code> afegim la ruta de la carpeta compartida amb l'unitat de disc.<br />
+<img alt="img" src="../img/Selecció_034.png" /><br />
+Ara ja podem comprovar que la carpeta ja s'ha compartit correctament.
+<img alt="img" src="../img/Selecció_035.png" />  </p>
+</blockquote>
+</li>
+<li>
+<p>Una tercera manera podria ser mitjançan un script d'inici de sessió:  </p>
+<ul>
+<li>L'script cal que s'anomeni logon.bat</li>
+<li>Cal que estigui a una carpeta determinada<br />
+<img alt="img" src="../img/Selecció_037.png" />  </li>
+<li>Cal que indiques simplement el nom de l'script a la fitxa de perfil de l'usuari, a l'apartat Script de inicio de sesión<br />
+<img alt="img" src="../img/Selecció_039.png" />  </li>
+<li>I dintre de l'script només has de posar una línia que munta la unitat de xarxa del tipus <br />
+  net use <code>Z: \\WIN2012\personals\%username%</code>
+<img alt="img" src="../img/Selecció_038.png" />  </li>
+<li>Ara ja podem comprovar que l'escript funciona al poder accedir<br />
+<img alt="img" src="../img/Selecció_040.png" />  </li>
+</ul>
+</li>
+</ol>
+<h3 id="9-creacio-dun-perfil-mobil">9. Creació dun perfil mòbil</h3>
+<p><strong>9.1 Crea un perfil mòbil i aplica'l a la resta d'usuaris</strong>  </p>
+<blockquote>
+<pre><code>1. Crea a la C: una carpeta anomenada perfils_alumnes  
+2. Comparteix aquesta carpeta només per al grup alumnes amb permisos de Control Total i per a l'Administrador també amb permisos de Control Total  
+3. Ves a un usuari alumne i al perfil introdueix la ruta del tipus `\\WIN2012\ perfils_alumnes \%username%`  
+4. Inicia sessió amb un usuari alumne en un equip client i comprova al servidor com es crea una carpeta dintre de perfils_alumnes amb el nom de l'usuari.v2  
+5. Per a què serveix un perfil mòbil?
+</code></pre>
+</blockquote>
+<h3 id="10-perfils-oabligatoris">10 Perfils oabligatoris</h3>
+<p><strong>10. Com faries si vols que aquest perfil sigui obligatori? Fes-ho i comprova que realment és obligatori</strong>  </p>
+<blockquote>
+<pre><code>1. Per a convertir un perfil mòbil en obligatori només cal que entris dintre de la carpeta v2 de l'usuari que escolleixis, mostres els arxius       ocults i que modifiques l'arxiu ntuser.dat a ntuser.man
+2. Llavors quan un usuari iniciï sessió, faci canvis a l'escriptori... i tanqui sessió i torni a entrar, els canvis no s'hauran emmagatzemat
+</code></pre>
+</blockquote>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../Ubuntu/" class="btn btn-neutral" title="Ubuntu"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Ubuntu/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>
