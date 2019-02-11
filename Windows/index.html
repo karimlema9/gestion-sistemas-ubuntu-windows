@@ -239,15 +239,15 @@
 <p><strong>2.1. Modifica el nom del servidor</strong>  </p>
 <blockquote>
 <p>Ara editarem diferents apartats del servidor Windows 2012 amb la comanda<strong><code>sconfig</code></strong>.
-<img alt="img" src="/img/Selecció_001.png" />
+<img alt="img" src="../img/Selecció_001.png" />
 1. Cal seleccionar el numero <strong>2</strong> per accedir a les opcions de cambiar el nom dels Servidor.<br />
 2. Despres ja podem escriure el nou nom <code>KARIM-SERVER</code> del servidor i reiniciem l'equip per a que s'apliquen els canvis.<br />
-<img alt="img" src="/img/Selecció_002.png" /></p>
+<img alt="img" src="../img/Selecció_002.png" /></p>
 </blockquote>
 <p><strong>2.2. Posa una ip fixa</strong>  </p>
 <blockquote>
 <p>Ara afegirem una nova <strong>IP</strong> estatica utilitzant la comanda <strong><code>sconfig</code></strong>.<br />
-<img alt="img" src="/img/Selecció_003.png" /><br />
+<img alt="img" src="../img/Selecció_003.png" /><br />
 1. En primer lloc seleccionem el numero <strong>8</strong> per entrar a les opcions de <code>red</code>.<br />
 2. Despres seleccionem el numero <strong>10</strong> el qual serveix per indica el numero de de index de l'adaptador.<br />
 3. Ara cal indicar el numero <strong>1</strong> per indicar que volem establir una nova <strong>IP</strong>.<br />
@@ -257,23 +257,23 @@
 <p><strong>2.3. Desactiva les actualitzacions</strong>  </p>
 <blockquote>
 <p>Ara desactivarem el <code>firewall</code> utilitzant la comanda <strong><code>sconfig</code></strong>.<br />
-<img alt="img" src="/img/Selecció_004.png" />
+<img alt="img" src="../img/Selecció_004.png" />
 1. Començem seleccionant el numero <strong>5</strong> per accedir a les opcions de actualitzacions.<br />
 2. Despres seleccionem <code>m</code> per indicar que les actualizacions siguen manuals i no automatiques.</p>
 </blockquote>
 <p><strong>2.4. Comprova que la zona horària sigui la correcta</strong>  </p>
 <blockquote>
 <p>Ara comprovarem que la zona horària sigui la correcta utilitzant la comanda <strong><code>sconfig</code></strong>.<br />
-<img alt="img" src="/img/Selecció_005.png" />
+<img alt="img" src="../img/Selecció_005.png" />
 1. Per poder comprovar la zona horaria cal seleccionar el numero <strong>9</strong>.<br />
 2. Un cop seleccionat el numero corresponent ens surtira el rellotge hi ho podrem comprovar.</p>
 </blockquote>
 <p><strong>2.5. Reinicia la màquina i FES-TE UNA CÒPIA DE SEGURETAT</strong>  </p>
 <blockquote>
 <p>Ara reiniciarem el servidor utilitzant la comanda <strong><code>sconfig</code></strong>.<br />
-<img alt="img" src="/img/Selecció_007.png" /><br />
+<img alt="img" src="../img/Selecció_007.png" /><br />
 1. Seleccionarem el numero <strong>13</strong> que serveix per reiniciar el servidor.
-<img alt="img" src="/img/Selecció_006.png" /><br />
+<img alt="img" src="../img/Selecció_006.png" /><br />
 2. Un cop reiniciat fem una <code>còpia de seguretat</code> fent una instantanea amb <code>VirtualBox</code>.</p>
 </blockquote>
 </blockquote>
@@ -282,17 +282,17 @@
 <p><strong>3.1. Treure la interfície Shell de la màquina amb GUI, o sigui, deixar només una interfície molt bàsica (has de fer-ho mitjançant l’opció de “Quitar roles y características”)</strong>  </p>
 <blockquote>
 <p>En primer lloc seleccionem l'opció de <code>Quitar roles y funciones</code> que estroba a la part superior dins de <code>Administrar</code>.<br />
-<img alt="img" src="/img/Selecció_008.png" /><br />
+<img alt="img" src="../img/Selecció_008.png" /><br />
 1. Despres anem a l'apartat <code>Caracteristicas</code>.<br />
 2. Un cop dins deseleccionem l'opcio <code>Windows PowerShell</code>.<br />
 3. Ara ja podem seleccionar <code>Quitar caracteristica</code> per treure-la.
-<img alt="img" src="/img/Selecció_009.png" /><br />
+<img alt="img" src="../img/Selecció_009.png" /><br />
 Ara seleccionem l'opcio de reinici automatic i seguim amb el process.
-<img alt="img" src="/img/Selecció_010.png" /><br />
+<img alt="img" src="../img/Selecció_010.png" /><br />
 Ara hem desperar a que es carregue el process.
-<img alt="img" src="/img/Selecció_011.png" /><br />
+<img alt="img" src="../img/Selecció_011.png" /><br />
 Un cop reiniciat ja podrem gaudir del nostre servidor sense part Grafica.
-<img alt="img" src="/img/Selecció_012.png" />  </p>
+<img alt="img" src="../img/Selecció_012.png" />  </p>
 </blockquote>
 </blockquote>
 <h3 id="4-installa-una-interficie-grafica-al-servidor-core">4. Instal·la una interficie gràfica al servidor Core</h3>
@@ -300,19 +300,19 @@ Un cop reiniciat ja podrem gaudir del nostre servidor sense part Grafica.
 <p><strong>3.2. Afegir una interfície molt bàsica a la màquina amb Core (a continuació tens les passes a seguir)</strong>  </p>
 <blockquote>
 <p><strong>3.2.1. Afegim la .iso del server</strong><br />
-<img alt="img" src="/img/Selecció_013.png" /><br />
+<img alt="img" src="../img/Selecció_013.png" /><br />
 <strong>3.2.2. Executem powershell</strong><br />
-<img alt="img" src="/img/Selecció_014.png" /><br />
+<img alt="img" src="../img/Selecció_014.png" /><br />
 <strong>3.2.3. mkdir C:\wim</strong><br />
-<img alt="img" src="/img/Selecció_015.png" /><br />
+<img alt="img" src="../img/Selecció_015.png" /><br />
 <strong>3.2.4. Assignem la nostra versió amb dism /get-wiminfo /wimfile:d:\sources\install.wim</strong><br />
-<img alt="img" src="/img/Selecció_016.png" /><br />
+<img alt="img" src="../img/Selecció_016.png" /><br />
 <strong>3.2.5. Muntem  al directori creat ambdism /mount-wim /wimfile:d:\sources\install.wim /index:2 /mountdir:c:\wim /readonly</strong><br />
-<img alt="img" src="/img/Selecció_017.png" /><br />
+<img alt="img" src="../img/Selecció_017.png" /><br />
 <strong>3.2.6. Instal·lem amb Install-WindowsFeature Server-Gui-Mgmt-Infra –Source C:\wim \Windows\WinSxS</strong><br />
-<img alt="img" src="/img/Selecció_018.png" /><br />
+<img alt="img" src="../img/Selecció_018.png" /><br />
 <strong>3.2.7. Reiniciem amb shutdown –r –t 0</strong><br />
-<img alt="img" src="/img/Selecció_019.png" /><br />
+<img alt="img" src="../img/Selecció_019.png" /><br />
 Reiniciem i comprobem que ja esta instal·lat.</p>
 </blockquote>
 </blockquote>
@@ -339,15 +339,15 @@ Reiniciem i comprobem que ja esta instal·lat.</p>
 <p><strong>5.1 Valida un equip client al domini</strong></p>
 <blockquote>
 <p>En primer lloc cal treure el Firewall del Servidor i de l'eqip client.
-<img alt="img" src="/img/Selecció_020.png" /><br />
+<img alt="img" src="../img/Selecció_020.png" /><br />
 Un cop desactivat els Firellaws anem al client, i dins de les propietats de l'equip seleccionem <code>Cambiar configuración</code>.
-<img alt="img" src="/img/Selecció_021.png" /><br />
+<img alt="img" src="../img/Selecció_021.png" /><br />
 Un cop dins de les propietats del sistema anem a l'opció <code>Cambiar...</code> .
-<img alt="img" src="/img/Selecció_022.png" /><br />
+<img alt="img" src="../img/Selecció_022.png" /><br />
 Ara li indiquem el nom del domini que en aquest cas es <strong><code>karim.cat</code></strong> i acceptem.
-<img alt="img" src="/img/Selecció_023.png" /><br />
+<img alt="img" src="../img/Selecció_023.png" /><br />
 Ara anem al Servidor i comprovem que l'equip s'ha unit al domini.
-<img alt="img" src="/img/Selecció_024.png" />  </p>
+<img alt="img" src="../img/Selecció_024.png" />  </p>
 </blockquote>
 </blockquote>
 <h3 id="6-establir-un-horari-de-connectivitat">6. Establir un horari de connectivitat</h3>
@@ -362,9 +362,9 @@ Ara anem al Servidor i comprovem que l'equip s'ha unit al domini.
 <p>Des del Windows Server, clic dret a sobre l’equip i Administrar.</p>
 <blockquote>
 <p>Boto dret sobre l'equip i selecconem <code>Administrar</code>.
-<img alt="img" src="/img/Selecció_025.png" /><br />
+<img alt="img" src="../img/Selecció_025.png" /><br />
 Ara afegirem al grup <code>Administradores</code> l'usuari <code>karim</code>.
-<img alt="img" src="/img/Selecció_026.png" /><br />
+<img alt="img" src="../img/Selecció_026.png" /><br />
 1. El primer pas es accedir a la categoria <code>Usuarios y grupos locales</code>.<br />
 2. Ara seleccionem el grup <code>Administradores</code> boto dret i anem a Propietats.<br />
 3. Un cop dins de propipetats anem a <code>Agregar</code>.<br />
@@ -375,9 +375,9 @@ Ara afegirem al grup <code>Administradores</code> l'usuari <code>karim</code>.
 <blockquote>
 <blockquote>
 <p>Comprovem que l'usuari <code>karim</code> es troba dins del grup d'administradors.
-<img alt="img" src="/img/Selecció_027.png" /><br />
+<img alt="img" src="../img/Selecció_027.png" /><br />
 Per comprovar que l'usuari <code>karim</code> té els permissos de l'administrador anem a canviar l'hora de l'equip ja que només és pots fer amb permissos d'administrador.
-<img alt="img" src="/img/Selecció_028.png" />  </p>
+<img alt="img" src="../img/Selecció_028.png" />  </p>
 </blockquote>
 </blockquote>
 <h3 id="8-carpetes-compartides-amb-diferents-metodes">8. Carpetes compartides amb diferents metodes</h3>
@@ -389,16 +389,16 @@ Per comprovar que l'usuari <code>karim</code> té els permissos de l'administrad
 <ul>
 <li>Deixem Documentos igual i cerquem la carpeta per la xarxa i la connectem com a unitat de xarxa<blockquote>
 <p>Ara dins el servidor creem una carpeta compartida dins de la unitat de <code>DADES</code>.
-<img alt="img" src="/img/Selecció_029.png" /><br />
+<img alt="img" src="../img/Selecció_029.png" /><br />
 Ara anem a les propietats de l'usuario karim dins de <code>perfil</code> a carpetes compartides afegim la lletra de la unitat de disc i la ruta de la carpeta.<br />
-<img alt="img" src="/img/Selecció_030.png" /><br />
+<img alt="img" src="../img/Selecció_030.png" /><br />
 Ara ja podem comprovar que ja s'ha compartit la carpeta compartida.
-<img alt="img" src="/img/Selecció_031.png" />  </p>
+<img alt="img" src="../img/Selecció_031.png" />  </p>
 </blockquote>
 </li>
 <li>A l’ordinador (amb un usuari administrador) modifiquem la ruta de Documentos  <blockquote>
 <p>Anem a les propietats de la carpeta <code>documentos</code> i canviem la ruta per la careta compartida del servidor.<br />
-<img alt="img" src="/img/Selecció_032.png" />  </p>
+<img alt="img" src="../img/Selecció_032.png" />  </p>
 </blockquote>
 </li>
 </ul>
@@ -408,11 +408,11 @@ Ara ja podem comprovar que ja s'ha compartit la carpeta compartida.
     2.1 Creem la carpeta de l’usuari al servidor i la compartim només per a l’usuari amb els permisos corresponents i a la fitxa de l’usuari, omplim        el camp connectar de la seva carpeta, assignem una lletra i la ruta del recurs compartit. Per exemple: <code>R: \\WIN2012\personals\%username%</code>  </p>
 <blockquote>
 <p>Creem la carpeta compartida de nom <code>Perosnal</code> i li donem permissos a l'usuari <code>karim</code>.
-<img alt="img" src="/img/Selecció_033.png" /><br />
+<img alt="img" src="../img/Selecció_033.png" /><br />
 Ara dins de propietats de l'usuari a <code>perfil</code> afegim la ruta de la carpeta compartida amb l'unitat de disc.<br />
-<img alt="img" src="/img/Selecció_034.png" /><br />
+<img alt="img" src="../img/Selecció_034.png" /><br />
 Ara ja podem comprovar que la carpeta ja s'ha compartit correctament.
-<img alt="img" src="/img/Selecció_035.png" />  </p>
+<img alt="img" src="../img/Selecció_035.png" />  </p>
 </blockquote>
 </li>
 <li>
@@ -420,14 +420,14 @@ Ara ja podem comprovar que la carpeta ja s'ha compartit correctament.
 <ul>
 <li>L'script cal que s'anomeni logon.bat</li>
 <li>Cal que estigui a una carpeta determinada<br />
-<img alt="img" src="/img/Selecció_037.png" />  </li>
+<img alt="img" src="../img/Selecció_037.png" />  </li>
 <li>Cal que indiques simplement el nom de l'script a la fitxa de perfil de l'usuari, a l'apartat Script de inicio de sesión<br />
-<img alt="img" src="/img/Selecció_039.png" />  </li>
+<img alt="img" src="../img/Selecció_039.png" />  </li>
 <li>I dintre de l'script només has de posar una línia que munta la unitat de xarxa del tipus <br />
   net use <code>Z: \\WIN2012\personals\%username%</code>
-<img alt="img" src="/img/Selecció_038.png" />  </li>
+<img alt="img" src="../img/Selecció_038.png" />  </li>
 <li>Ara ja podem comprovar que l'escript funciona al poder accedir<br />
-<img alt="img" src="/img/Selecció_040.png" />  </li>
+<img alt="img" src="../img/Selecció_040.png" />  </li>
 </ul>
 </li>
 </ol>
@@ -459,7 +459,7 @@ Ara ja podem comprovar que la carpeta ja s'ha compartit correctament.
 <p><strong>4. Executa la comanda notepad parametres.txt</strong></p>
 <blockquote>
 <p>Amb la comanda <code>notepad nomarxiu.txt</code> creem un arxiu i ens demana crear-ho si no esta creat anteriorment.
-<img alt="img" src="/img/Selecció_041.png" />  </p>
+<img alt="img" src="../img/Selecció_041.png" />  </p>
 </blockquote>
 <h3 id="5-afegir-parametres-dinstallacio">5 Afegir parametres d'instal·lació</h3>
 <p><strong>5.1 Escriu dintre del fitxer, després desa els canvis i surt:</strong></p>
@@ -472,19 +472,19 @@ domainnetbiosname=vesper
 replicaornewdomain=domain
 safemodeadminpassword=Server2012
 </code></pre>
-<p><img alt="img" src="/img/Selecció_042.png" />  </p>
+<p><img alt="img" src="../img/Selecció_042.png" />  </p>
 </blockquote>
 <h3 id="6-installacio-desatesa">6 Instal·lació desatesa</h3>
 <p><strong>6.1 Ara començarem la instal·lació desatesa amb dcpromo /unattend:parametres.txt</strong></p>
 <blockquote>
 <p>Executem <code>dcpromo /unattend:parametres.txt</code> i esperem a que tot s'instale correctament i l'equip es reiniciara per aplicar els canvis.
-<img alt="img" src="/img/Selecció_043.png" />  </p>
+<img alt="img" src="../img/Selecció_043.png" />  </p>
 </blockquote>
 <h3 id="7-comprovacio-amb-systeminfo">7 Comprovació amb systeminfo</h3>
 <p><strong>7.1 Quan finalitzi la instal·lació executa systeminfo per a comprobar que el domini s'ha instal·lat correctament</strong></p>
 <blockquote>
 <p>Podem comprovar que si que s'ha instal·lat el domini.
-<img alt="img" src="/img/Selecció_044.png" />  </p>
+<img alt="img" src="../img/Selecció_044.png" />  </p>
 </blockquote>
 <h4 id="objectius">Objectius</h4>
 <blockquote>
@@ -499,54 +499,54 @@ aquestes comandes ds només estan disponibles quan instal·lem un domini, i en a
 <blockquote>
 <pre><code>dsadd ou ou=alumnes,dc=vesper,dc=cat
 </code></pre>
-<p><img alt="img" src="/img/Selecció_045.png" />  </p>
+<p><img alt="img" src="../img/Selecció_045.png" />  </p>
 </blockquote>
 <h3 id="9-creacio-dun-grup-amb-core">9 Creació d'un grup amb Core</h3>
 <p><strong>9.1 I per a crear un grup dintre de la uo creada caldria fer:</strong></p>
 <blockquote>
 <pre><code>dsadd group "cn=1rasix,ou=alumnes,dc=vesper,dc=cat" -secgrp yes -scope L
 </code></pre>
-<p><img alt="img" src="/img/Selecció_046.png" />  </p>
+<p><img alt="img" src="../img/Selecció_046.png" />  </p>
 </blockquote>
 <h3 id="10-creacio-dun-usuari-amb-core">10 Creació d'un usuari amb Core</h3>
 <p><strong>10.1 I per a crear un usuari:</strong> </p>
 <blockquote>
 <pre><code>dsadd user "cn=alumne1,ou=alumnes,dc=vesper,dc=cat" -upn alumne1 -pwd Server2012
 </code></pre>
-<p><img alt="img" src="/img/Selecció_047.png" />  </p>
+<p><img alt="img" src="../img/Selecció_047.png" />  </p>
 </blockquote>
 <h3 id="11-afegir-usuaris-a-grups">11 Afegir usuaris a grups</h3>
 <p><strong>11.1 Ara investiga com ho faries per tal d'afegir l'usuari dintre del grup.</strong></p>
 <blockquote>
 <p>Per afegitr un usauri al grup cal utilitzar la comanda<code>dsmod group "nomcompletdelgrup" -addmbr "nomcompletdelusuari"</code>.
-<img alt="img" src="/img/Selecció_048.png" />  </p>
+<img alt="img" src="../img/Selecció_048.png" />  </p>
 </blockquote>
 <h3 id="12-cosultar-grups">12 Cosultar grups</h3>
 <p><strong>12.1 Com ho faries per tal de consultar els grups d'una uo.</strong></p>
 <blockquote>
 <p>Per consultar els grups de una <strong>UO</strong> cal executar la comanda <code>dsquery group nomcompletdelaUO</code>.
-<img alt="img" src="/img/Selecció_049.png" />  </p>
+<img alt="img" src="../img/Selecció_049.png" />  </p>
 </blockquote>
 <h3 id="13-consultar-membres-dels-grups">13 Consultar membres dels grups</h3>
 <p><strong>13.1 Com ho faries per tal de consultar els membres d'un grup</strong></p>
 <blockquote>
 <p>Per poder consultar el llistat d'usuaris d'un membre cal executar la comanda <code>dsget group "nomcompletdelgrup" -members "nomcompletdelusuari" -membres -expand</code>.
-<img alt="img" src="/img/Selecció_050.png" />  </p>
+<img alt="img" src="../img/Selecció_050.png" />  </p>
 </blockquote>
 <h3 id="14-prova-diferents-comandes">14 Prova diferents comandes</h3>
 <p><strong>14.1 Has provat dsadd, dsquery i dsmod. Tens també disponibles dsmove, dsrm, dsget. Fes una prova amb cadascun d'ells.</strong></p>
 <blockquote>
 <p>La comanda <strong><code>dsmove</code></strong> serveix per renombrar i moure grups, usuaris etc..<br />
 Un exemple d'us de la comanda es el següent en el qual canviem el nom del grup <code>dsmove "nomcompletgrup -newname "nounom""</code>.
-<img alt="img" src="/img/Selecció_051.png" />  </p>
+<img alt="img" src="../img/Selecció_051.png" />  </p>
 </blockquote>
 <h3 id="15-probes-amb-un-client">15 Probes amb un Client</h3>
 <p><strong>15.1  Per tal de comprovar que tot el que has fet anteriorment funciona correctament, valida un client en aquest domini</strong></p>
 <blockquote>
 <p>En primeres instancies unim el client al servidor <code>lema.cat</code>.
-<img alt="img" src="/img/Selecció_052.png" /><br />
+<img alt="img" src="../img/Selecció_052.png" /><br />
 Comprovem que ja s'ha unit correctament desprès de reiniciar.
-<img alt="img" src="/img/Selecció_053.png" />  </p>
+<img alt="img" src="../img/Selecció_053.png" />  </p>
 </blockquote>
 <h2 id="comandes-amb-cmdlets-powershell">Comandes amb cmdlets "PowerShell"</h2>
 <h3 id="1-copia-de-seguretat">1 Copia de seguretat</h3>
@@ -557,54 +557,54 @@ Comprovem que ja s'ha unit correctament desprès de reiniciar.
 <p><strong>3.1 Els exercicis que realitzaràs a continuació seran a través del powershell, o sigui dintre del cmd escriu powershell per a iniciar-lo.</strong></p>
 <h3 id="4-installem-els-paquets-necessaris">4 Instal·lem els paquets necessaris</h3>
 <p><strong>4.1 Executa la comanda install-windowsfeature -name ad-domain-services</strong>
-<img alt="img" src="/img/Selecció_055.png" />  </p>
+<img alt="img" src="../img/Selecció_055.png" />  </p>
 <h3 id="5-reinici">5 Reinici</h3>
 <p><strong>5.1 No cal reiniciar.</strong> </p>
 <h3 id="6-installem-el-nostre-domini">6 Instal·lem el nostre domini</h3>
 <p><strong>6.1 Executa install-addsforest (vesper.cat), pot tardar una mica. Després es reiniciarà.</strong>
-<img alt="img" src="/img/Selecció_056.png" />  </p>
+<img alt="img" src="../img/Selecció_056.png" />  </p>
 <h3 id="7-comprovacio-del-domini">7 Comprovació del domini</h3>
 <p><strong>7.1 sconfig per comprovar que la instal·lació del domini és correcta.</strong>
-<img alt="img" src="/img/Selecció_057.png" />  </p>
+<img alt="img" src="../img/Selecció_057.png" />  </p>
 <h3 id="8-extreiem-les-comandes-de-poershell">8 Extreiem les comandes de Poershell</h3>
 <p><strong>8.1 Torna a entrar a powershell i exeuta get-command per tal de veure tots els cmdlets disponibles</strong>
-<img alt="img" src="/img/Selecció_058.png" />  </p>
+<img alt="img" src="../img/Selecció_058.png" />  </p>
 <h3 id="9-extxtreiem-les-comandes-de-ad-en-powershell">9 Extxtreiem les comandes de AD en Powershell</h3>
 <p><strong>9.1 I per tal de veure els que fan referència només al mòdul d'AD executa get-command -module activedirectory</strong>
-<img alt="img" src="/img/Selecció_059.png" />  </p>
+<img alt="img" src="../img/Selecció_059.png" />  </p>
 <h3 id="10-cracio-duna-uo-amb-powershell">10 Cració d'una UO amb Powershell</h3>
 <p><strong>10.1 Crea la uo amb la comanda new-adorganizationalunit rrhh -path "dc=vesper,dc=cat"</strong>
-<img alt="img" src="/img/Selecció_060.png" />  </p>
+<img alt="img" src="../img/Selecció_060.png" />  </p>
 <h3 id="11-creacio-dun-grup-amb-powershell">11 Creació d'un grup amb Powershell</h3>
 <p><strong>11.1 Crea un grup dintre amb la comanda new-adgroup profes -path "ou=rrhh,dc=vesper,dc=cat"</strong>
-<img alt="img" src="/img/Selecció_061.png" />  </p>
+<img alt="img" src="../img/Selecció_061.png" />  </p>
 <h3 id="12-creacio-dun-usuari-amb-powershell">12 Creació d'un usuari amb Powershell</h3>
 <p><strong>12.1 Crea un usuari</strong>
-<img alt="img" src="/img/Selecció_062.png" />  </p>
+<img alt="img" src="../img/Selecció_062.png" />  </p>
 <h3 id="13-afegir-un-usari-a-un-grup-amb-powershell">13 Afegir un usari a un grup amb Powershell</h3>
 <p><strong>13.1 Afegeix l'usuari al grup</strong>
-<img alt="img" src="/img/Selecció_063.png" />  </p>
+<img alt="img" src="../img/Selecció_063.png" />  </p>
 <h3 id="14-modifica-el-nom-dun-usuari-amb-powershell">14 Modifica el nom d'un usuari amb Powershell</h3>
 <p><strong>14.1 Modifica alguna cosa de l'usuari</strong>
-<img alt="img" src="/img/Selecció_064.png" />  </p>
+<img alt="img" src="../img/Selecció_064.png" />  </p>
 <h3 id="15-crear-i-borrar-dun-grup-amb-powershell">15 Crear i borrar d'un grup amb Powershell</h3>
 <p><strong>15.1 Crea un altre grup dintre de la uo anterior i després esborra'l</strong>
-<img alt="img" src="/img/Selecció_065.png" />  </p>
+<img alt="img" src="../img/Selecció_065.png" />  </p>
 <h3 id="16-diferents-comandes">16 Diferents comandes</h3>
 <p><strong>16.1 Prova 5 comandes més i explica per a què serveixen</strong></p>
 <blockquote>
 <p><code>get-aduser</code> ens mostra tots els usuaris que tenim.<br />
-<img alt="img" src="/img/Selecció_066.png" /><br />
+<img alt="img" src="../img/Selecció_066.png" /><br />
 <code>get-addomain</code> ens mostra informació del domini.<br />
-<img alt="img" src="/img/Selecció_067.png" /><br />
+<img alt="img" src="../img/Selecció_067.png" /><br />
 Altres comandes poden ser <code>set-addgroup</code> que modifica les propietats dels grups, <code>move-adobject</code> que ens permet moure un objecte dun domini a un altre i finalment <code>restore-adobject</code> que permet restaura un objecte que s'ha eliminat.</p>
 </blockquote>
 <h3 id="17-unim-lusuari-al-domini">17 Unim l'usuari al domini</h3>
 <p><strong>17.1 Valida un client al domini per a comprovar que tot s'ha creat correctament.</strong></p>
 <blockquote>
 <p>Podem comprovar que s'ha unit correctament l'equip al domini.
-<img alt="img" src="/img/Selecció_069.png" /><br />
-<img alt="img" src="/img/Selecció_068.png" />  </p>
+<img alt="img" src="../img/Selecció_069.png" /><br />
+<img alt="img" src="../img/Selecció_068.png" />  </p>
 </blockquote>
               
             </div>
