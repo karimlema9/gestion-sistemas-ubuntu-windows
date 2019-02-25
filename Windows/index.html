@@ -647,19 +647,52 @@ Un cop instal·lat ens mostrara un avis que el domini es de només elctura.
 <img alt="img" src="../img/Selecció_081.png" /><br />
 Podem observa els permissos que té la maquina que conte el <code>RODC</code>.
 <img alt="img" src="../img/Selecció_080.png" /><br />
-a. Si tanques el PDC pots continuar validant el client al domini i accedint als recursos del servidor</p>
-<p>b. Al RODC només pots consultar, NO crear noves entitats</p>
+<strong>a. Si tanques el PDC pots continuar validant el client al domini i accedint als recursos del servidor</strong>
+Podem seguir validant i accedint als recursos.
+<img alt="img" src="../img/Selecció_611.png" /><br />
+<strong>b. Al RODC només pots consultar, NO crear noves entitats</strong>
+Com podem comprovar nnomés tenim permisos de sols lectura.
+<img alt="img" src="../img/Selecció_613.png" />  </p>
 </blockquote>
 <h3 id="2-domini-en-el-mateix-subdominis">2 Domini en el mateix Subdominis</h3>
 <p><strong>2. Imagina’t que tens el domini vesper.cat, doncs ara crea un subdomini del tipus info.vesper.cat o crea un altre domini, però dintre del mateix bosc. I si vols, crea les dues coses. Què has de comprovar? Per exemple:</strong></p>
 <blockquote>
-<p>a. Si has creat un subdomini, has de veure si des del domini pots accedir a les entitats dels subdomini i gestionar-les, o és a l’inrevès.</p>
-<p>b. Si has creat un subdomini, prova de validar el client amb un usuari creat al subdomini</p>
-<p>c. Si has decidit crear un nou domini en el mateix bosc prova des d’un domini pots accedir a l’altre i gestionar les seves entitats, només les pots veure o ni això tampoc.</p>
-<p>d. Prova de validar-te al client amb un usuari del nou domini creat.</p>
+<p><strong>1.</strong> Ara afegim un domini secundari a un bosc existent, indiquem el nom i el domini principal.
+<img alt="img" src="../img/Selecció_082.png" /><br />
+<strong>2.</strong> Ara li donem una contrasenya al Subdomini.
+<img alt="img" src="../img/Selecció_083.png" /><br />
+<strong>3.</strong> Tornem a indicar el nom del Subdomini.
+<img alt="img" src="../img/Selecció_084.png" /><br />
+<strong>4.</strong> Ara ens mostrara un resum del configurat anteriorment.
+<img alt="img" src="../img/Selecció_085.png" /><br />
+<strong>5.</strong> Només queda instal·lar el Subdomini.
+<img alt="img" src="../img/Selecció_086.png" />  </p>
+<p><strong>a. Si has creat un subdomini, has de veure si des del domini pots accedir a les entitats dels subdomini i gestionar-les, o és a l’inrevès.</strong><br />
+Podem comprovar com accedim a les entitats del subdomini i Administrar el subdomini o a l'inversa.
+<img alt="img" src="../img/Selecció_087.png" /><br />
+<img alt="img" src="../img/Selecció_088.png" /><br />
+<strong>b. Si has creat un subdomini, prova de validar el client amb un usuari creat al subdomini.</strong><br />
+<img alt="img" src="../img/Selecció_621.png" /><br />
+Un cop creat l'usuari al subdomini a la maquina client accedim amb <code>nomdel'usuari@domini o subdomini</code>.<br />
+<img alt="img" src="../img/Selecció_678.png" /><br />
+Un cop accedit podem comprovar que ha sigut creada a <code>jlofa.lopez.cat Subdomini</code> pero amb <code>whoami</code> podem observa que hem accedit amb <code>lopez el Domini principal</code>.
+<img alt="img" src="../img/Selecció_677.png" /><br />
+c. Si has decidit crear un nou domini en el mateix bosc prova des d’un domini pots accedir a l’altre i gestionar les seves entitats, només les pots veure o ni això tampoc.
+d. Prova de validar-te al client amb un usuari del nou domini creat.</p>
 </blockquote>
 <h3 id="3-relacions-de-confianca">3 Relacions de confiança</h3>
 <p><strong>Una relació de confiança és la que et permet accedir amb els usuaris d’un domini amb un client validat en un altre domini. Per exemple: si jo tinc els dominis vesper.cat amb l’usuari vesper i miquel.com amb l’usuari miquel. Si creo una relació de confiança bidireccional, llavors en un ordinador client validat al domini miquel.com, podré accedir al domini vesper.cat amb l’usuari vesper. Doncs en aquest exercici has de prova això.</strong></p>
+<blockquote>
+<p>Desprès d'unir el Subdomi al Domini els i donme relacións de confiança
+<img alt="img" src="../img/Selecció_617.png" /><br />
+Ara provem a accedir en diferents usuaris:  </p>
+<blockquote>
+<p>Registrat amb el Subdomini accedim amb el domini i al contrari.<br />
+<img alt="img" src="../img/Selecció_678.png" /><br />
+<img alt="img" src="../img/Selecció_677.png" /><br />
+<img alt="img" src="../img/Selecció_680.png" />  </p>
+</blockquote>
+</blockquote>
               
             </div>
           </div>
