@@ -185,6 +185,19 @@
         </ul>
     
 
+    <li class="toctree-l2"><a href="#controladors-de-dominis-i-subdominis">Controladors de Dominis i Subdominis</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#1-controlador-de-domini-de-nomes-lectura-rodc">1 Controlador de Domini de només lectura (RODC)</a></li>
+        
+            <li><a class="toctree-l3" href="#2-domini-en-el-mateix-subdominis">2 Domini en el mateix Subdominis</a></li>
+        
+            <li><a class="toctree-l3" href="#3-relacions-de-confianca">3 Relacions de confiança</a></li>
+        
+        </ul>
+    
+
     </ul>
 	    </li>
           
@@ -221,6 +234,7 @@
             <div class="section">
               
                 <h2 id="instala-windows-server-12-gui-i-core">Insta·la Windows Server 12 - GUI i Core</h2>
+<hr />
 <h3 id="1-installa-un-servidor-windows-server-2012-amb-gui-i">1 Instal·la un servidor Windows Server 2012 amb GUI i:</h3>
 <blockquote>
 <pre><code>1.1 Modifica el nom del servidor  
@@ -449,6 +463,7 @@ Ara ja podem comprovar que la carpeta ja s'ha compartit correctament.
 </code></pre>
 </blockquote>
 <h2 id="comandes-cmd-en-windows-server-core">Comandes CMD en Windows Server "core"</h2>
+<hr />
 <h3 id="1-copies-de-seguretat">1 Copies de seguretat</h3>
 <p><strong>1.1 Fes una copia de la màquina Core</strong></p>
 <h3 id="2-comandes-cmd">2 Comandes CMD</h3>
@@ -549,6 +564,7 @@ Comprovem que ja s'ha unit correctament desprès de reiniciar.
 <img alt="img" src="../img/Selecció_053.png" />  </p>
 </blockquote>
 <h2 id="comandes-amb-cmdlets-powershell">Comandes amb cmdlets "PowerShell"</h2>
+<hr />
 <h3 id="1-copia-de-seguretat">1 Copia de seguretat</h3>
 <p><strong>1.1 Fes una copia de la màquina Core</strong></p>
 <h3 id="2-comprovacions-previes">2 Comprovacions previes</h3>
@@ -606,6 +622,44 @@ Altres comandes poden ser <code>set-addgroup</code> que modifica les propietats 
 <img alt="img" src="../img/Selecció_069.png" /><br />
 <img alt="img" src="../img/Selecció_068.png" />  </p>
 </blockquote>
+<h2 id="controladors-de-dominis-i-subdominis">Controladors de Dominis i Subdominis</h2>
+<hr />
+<h3 id="1-controlador-de-domini-de-nomes-lectura-rodc">1 Controlador de Domini de només lectura (RODC)</h3>
+<p><strong>1.1 Per al domini que tens instal·lat crea un RODC i fes les comprovacions necessaries per tal de verificar que funciona correctament, per exemple:</strong></p>
+<blockquote>
+<p><strong>1.</strong> En primer lloc accedim als Serveis de domini i creem un <code>RODC</code> selcceionant la primera opció per nuirl-ho al Domini principal.<br />
+<img alt="img" src="../img/Selecció_071.png" /><br />
+<strong>2.</strong> Ens aquesta captura afegim la contrasenya i seleccionem que el controlador de domini sigue <code>RODC</code>.<br />
+<img alt="img" src="../img/Selecció_072.png" /><br />
+<strong>3.</strong> Desprès deixem les opcions per defecte i seguim en l'instal·lació.<br />
+<img alt="img" src="../img/Selecció_073.png" /><br />
+<strong>4.</strong> Ara seleccionem que volem que sigue una replica del Domini principal.
+<img alt="img" src="../img/Selecció_074.png" /><br />
+<strong>5.</strong> Igual que com moltes instal·lacións en Windows anem fent <code>Següent</code> fins que ens sortigue per instal·lar.
+<img alt="img" src="../img/Selecció_075.png" /><br />
+<strong>6.</strong> Igual que com moltes instal·lacións en Windows anem fent <code>Següent</code> fins que ens sortigue per instal·lar.
+<img alt="img" src="../img/Selecció_076.png" /><br />
+<strong>7.</strong> Un cop arrivats a aquest punt seleccionem <code>Instalar</code> i esperem.
+<img alt="img" src="../img/Selecció_077.png" /><br />
+<strong>8.</strong> Ara ja podem comprovar que s'ha unit el <code>RODC</code> en mode només lectura.
+<img alt="img" src="../img/Selecció_079.png" /><br />
+Un cop instal·lat ens mostrara un avis que el domini es de només elctura.
+<img alt="img" src="../img/Selecció_081.png" /><br />
+Podem observa els permissos que té la maquina que conte el <code>RODC</code>.
+<img alt="img" src="../img/Selecció_080.png" /><br />
+a. Si tanques el PDC pots continuar validant el client al domini i accedint als recursos del servidor</p>
+<p>b. Al RODC només pots consultar, NO crear noves entitats</p>
+</blockquote>
+<h3 id="2-domini-en-el-mateix-subdominis">2 Domini en el mateix Subdominis</h3>
+<p><strong>2. Imagina’t que tens el domini vesper.cat, doncs ara crea un subdomini del tipus info.vesper.cat o crea un altre domini, però dintre del mateix bosc. I si vols, crea les dues coses. Què has de comprovar? Per exemple:</strong></p>
+<blockquote>
+<p>a. Si has creat un subdomini, has de veure si des del domini pots accedir a les entitats dels subdomini i gestionar-les, o és a l’inrevès.</p>
+<p>b. Si has creat un subdomini, prova de validar el client amb un usuari creat al subdomini</p>
+<p>c. Si has decidit crear un nou domini en el mateix bosc prova des d’un domini pots accedir a l’altre i gestionar les seves entitats, només les pots veure o ni això tampoc.</p>
+<p>d. Prova de validar-te al client amb un usuari del nou domini creat.</p>
+</blockquote>
+<h3 id="3-relacions-de-confianca">3 Relacions de confiança</h3>
+<p><strong>Una relació de confiança és la que et permet accedir amb els usuaris d’un domini amb un client validat en un altre domini. Per exemple: si jo tinc els dominis vesper.cat amb l’usuari vesper i miquel.com amb l’usuari miquel. Si creo una relació de confiança bidireccional, llavors en un ordinador client validat al domini miquel.com, podré accedir al domini vesper.cat amb l’usuari vesper. Doncs en aquest exercici has de prova això.</strong></p>
               
             </div>
           </div>
