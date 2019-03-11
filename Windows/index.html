@@ -198,6 +198,27 @@
         </ul>
     
 
+    <li class="toctree-l2"><a href="#directives-de-grup-gpo">Directives de grup (GPO)</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#1-modificacio-de-la-gpo-en-directiva-dusuari">1 Modificacio de la GPO en directiva d'usuari</a></li>
+        
+            <li><a class="toctree-l3" href="#2-modificacio-de-la-gpo-en-directiva-dequip">2 Modificacio de la GPO en directiva d'equip</a></li>
+        
+            <li><a class="toctree-l3" href="#3-gpo-dinici-per-a-equips-i-usuaris">3 GPO d'inici per a equips i usuaris.</a></li>
+        
+            <li><a class="toctree-l3" href="#4-creacio-de-una-gpo-per-a-una-uo">4 Creacio de una GPO per a una UO</a></li>
+        
+            <li><a class="toctree-l3" href="#5-excloir-una-gpo-a-una-uo">5 Excloir una GPO a una UO</a></li>
+        
+            <li><a class="toctree-l3" href="#6-bloqueja-herencia-de-directives">6 Bloqueja herencia de directives</a></li>
+        
+            <li><a class="toctree-l3" href="#7-exigir-alguna-directiva">7 Exigir alguna directiva</a></li>
+        
+        </ul>
+    
+
     </ul>
 	    </li>
           
@@ -692,6 +713,61 @@ Ara provem a accedir en diferents usuaris:  </p>
 <img alt="img" src="../img/Selecció_677.png" /><br />
 <img alt="img" src="../img/Selecció_680.png" />  </p>
 </blockquote>
+</blockquote>
+<h2 id="directives-de-grup-gpo">Directives de grup (GPO)</h2>
+<h4 id="1-modificacio-de-la-gpo-en-directiva-dusuari">1 Modificacio de la GPO en directiva d'usuari</h4>
+<p><strong>1.1 Modifica la GPO del domini establint algun canvi en algun directiva d’usuari.</strong></p>
+<blockquote>
+<p>Habilitem que quan sinicie el <code>explorador de archivos</code> sigue en la pantalla completa.
+<img alt="img" src="../img/Selecció_681.png" /><br />
+Ara comprovem que al iniciar el <code>explorador de archivos</code> al client es compleix correctament.
+<img alt="img" src="../img/Selecció_682.png" />  </p>
+</blockquote>
+<h4 id="2-modificacio-de-la-gpo-en-directiva-dequip">2 Modificacio de la GPO en directiva d'equip</h4>
+<p><strong>2.1 Modifica la GPO del domini establint algun canvi en algun directiva d'equip.</strong></p>
+<blockquote>
+<p>El proxim canvi es fer que l'usuari no pugue cambiar el color de les finestres.
+<img alt="img" src="../img/Selecció_683.png" /><br />
+Comprovem que al intentar canviar el color ens dona error.
+<img alt="img" src="../img/Selecció_684.png" />  </p>
+</blockquote>
+<h4 id="3-gpo-dinici-per-a-equips-i-usuaris">3 GPO d'inici per a equips i usuaris.</h4>
+<p><strong>3.1 Crea una GPO d’inici amb uns valors establerts per defecte per als equips i per als usuaris.</strong></p>
+<blockquote>
+<p>Creem una GPO per defecte per al domini amb els valors per defecte als usuaris i els equips.
+<img alt="img" src="../img/Selecció_685.png" />  </p>
+</blockquote>
+<h4 id="4-creacio-de-una-gpo-per-a-una-uo">4 Creacio de una GPO per a una UO</h4>
+<p><strong>4.1 Crea una nova GPO per a una UO que tinguis creada. Afegeix alguna modificació de directives nova i contradiu alguna directiva que hagis aplicat al domini per veure què passa.</strong></p>
+<blockquote>
+<p>En primer lloc creem una GPO per a una UO en aquest cas <code>informatica</code>.
+<img alt="img" src="../img/Selecció_686.png" /><br />
+Desprès afegim una nova restricció que es que <code>no es puguen obrir les finestres d'incognit</code> i apliquem la contraria també.
+<img alt="img" src="../img/Selecció_687.png" /><br />
+Com podem comprovar ha fet cas a la primera restricció, aixo es que per defecte fa cas sempre a la directiva que es troba més superior si hi ha dos que es contradixen.
+<img alt="img" src="../img/Selecció_688.png" />  </p>
+</blockquote>
+<h4 id="5-excloir-una-gpo-a-una-uo">5 Excloir una GPO a una UO</h4>
+<p><strong>5.1 Prova d’excloure d’una GPO aplicada a una UO, algun usuari de la UO per veure què passa.</strong></p>
+<blockquote>
+<p>Ara excloiem a l'usuari <code>joan</code> de la GPO.
+<img alt="img" src="../img/Selecció_689.png" /><br />
+Comprovem que ja s'ha tret.
+<img alt="img" src="../img/Selecció_690.png" />  </p>
+</blockquote>
+<h4 id="6-bloqueja-herencia-de-directives">6 Bloqueja herencia de directives</h4>
+<p><strong>6.1 Prova de bloquejar l'herència de directives</strong></p>
+<blockquote>
+<p>Per bloquejar les herencies només cal fer boto dret sobre la UO i seleccionem <code>Bloquear hgerencia</code>.
+<img alt="img" src="../img/Selecció_691.png" />  </p>
+</blockquote>
+<h4 id="7-exigir-alguna-directiva">7 Exigir alguna directiva</h4>
+<p><strong>7.1 Prova d’exigir que es compleixi alguna directiva.</strong></p>
+<blockquote>
+<p>En canvi per exigir que compleixi alguna directiva cal indicar dins de la GPO amb boto dret i seleccionem <code>Exigido</code>.
+<img alt="img" src="../img/Selecció_693.png" /><br />
+Ens sortira aquest missatge i l'acceptem.
+<img alt="img" src="../img/Selecció_692.png" />  </p>
 </blockquote>
               
             </div>
