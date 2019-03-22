@@ -58,7 +58,31 @@
     <a class="current" href="./">Ubuntu</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#ubuntu">Ubuntu</a></li>
+    <li class="toctree-l2"><a href="#instalacio-i-configuracio-de-openldap">Insta·lació i Configuració de OpenLDAP</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#1-installa-openldap">1 Instal·la OpenLDAP:</a></li>
+        
+            <li><a class="toctree-l3" href="#2-creacio-de-uogrups-i-usuaris-amb-fitxers-ldif">2 Creació de UO,grups i usuaris amb fitxers LDIF</a></li>
+        
+            <li><a class="toctree-l3" href="#3-configuracio-dun-client-openldap">3 Configuració d'un client OpenLDAP</a></li>
+        
+            <li><a class="toctree-l3" href="#4-esquema-referent-a-ldap">4 Esquema referent a LDAP</a></li>
+        
+            <li><a class="toctree-l3" href="#5-atributs-obligatoris-i-opcionals">5 Atributs Obligatoris i Opcionals</a></li>
+        
+            <li><a class="toctree-l3" href="#6-encriptacio-de-contrasenya-en-arxius-ldif">6 Encriptacio de contrasenya en arxius LDIF</a></li>
+        
+            <li><a class="toctree-l3" href="#7-estructura-jerarquica-de-classes-ldap">7 Estructura jeràrquica de classes LDAP</a></li>
+        
+            <li><a class="toctree-l3" href="#8-estructura-de-la-comanda-ldapadd">8 Estructura de la comanda ldapadd</a></li>
+        
+            <li><a class="toctree-l3" href="#9-habilitar-caracter-als-arxius-ldif">9 Habilitar caracter als arxius LDIF</a></li>
+        
+            <li><a class="toctree-l3" href="#10-importancia-de-lordre-als-atributs">10 Importancia de l'ordre als atributs</a></li>
+        
+        </ul>
     
 
     </ul>
@@ -101,7 +125,244 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="ubuntu">Ubuntu</h2>
+                <h2 id="instalacio-i-configuracio-de-openldap">Insta·lació i Configuració de OpenLDAP</h2>
+<hr />
+<h3 id="1-installa-openldap">1 Instal·la OpenLDAP:</h3>
+<p><strong>1. Crea un servidor amb OpenLDAP</strong><br />
+<strong>1.1. Configuracions inicials al servidor</strong>  </p>
+<blockquote>
+<blockquote>
+<p>En primer lloc configurem la xarxa, li donme una IP fixa al servidor.
+<img alt="img" src="../img/Selecció_723.png" />  </p>
+<p>També cal afegir la ip fixa més el nom del domini a l'arxiu <code>/etc/hosts</code>.<br />
+<img alt="img" src="../img/Selecció_724.png" />  </p>
+</blockquote>
+</blockquote>
+<p><strong>1.2. Instal·lació i configuració dels paquets</strong>  </p>
+<blockquote>
+<blockquote>
+<p>Instal·lem els paquets necessaris <code>slapd ldap-utils -y</code>.
+<img alt="img" src="../img/Selecció_694.png" />  </p>
+<p>Després executem la seguent comanda per configura el <code>slapd</code>.
+<img alt="img" src="../img/Selecció_695.png" />  </p>
+<p>Omitim la configuració del servidor OpenLDAP.
+<img alt="img" src="../img/Selecció_696.png" />  </p>
+<p>Introduim el nom del domini <code>lema.cat</code>.
+<img alt="img" src="../img/Selecció_697.png" />  </p>
+<p>Ara indiquem el nom de l'oraganització.
+<img alt="img" src="../img/Selecció_698.png" />  </p>
+<p>I li donem una contrasenya.
+<img alt="img" src="../img/Selecció_699.png" />  </p>
+<p>El motor de la BD la deixem per defecte <code>MDB</code>.
+<img alt="img" src="../img/Selecció_700.png" />  </p>
+<p>Boorem la BD quan es purgen els paquets de <code>slapd</code>.
+<img alt="img" src="../img/Selecció_701.png" />  </p>
+<p>Finalment Movem la BD antigua.
+<img alt="img" src="../img/Selecció_702.png" />  </p>
+</blockquote>
+</blockquote>
+<p><strong>1.3. Creació de l'esquema base amb un fitxer ldif</strong>  </p>
+<blockquote>
+<p>Aquest exercici es realitzara en el següent punt.</p>
+</blockquote>
+<h3 id="2-creacio-de-uogrups-i-usuaris-amb-fitxers-ldif">2 Creació de UO,grups i usuaris amb fitxers LDIF</h3>
+<p><strong>2.1 Crea el domini, l'administrador, una uo, un grup i un usuari amb fitxers ldif</strong>  </p>
+<blockquote>
+<blockquote>
+<p>Creem l'arxiu <code>ldif</code> per crear un grup.
+<img alt="img" src="../img/Selecció_703.png" />  </p>
+<p>Creem l'arxiu <code>ldif</code> per crear una UO.
+<img alt="img" src="../img/Selecció_704.png" />  </p>
+<p>Creem l'arxiu <code>ldif</code> per crear un usuari.
+<img alt="img" src="../img/Selecció_705.png" />  </p>
+<p>Ara afegim la configuració dels arxius <code>ldif</code> amb la següent comanda.
+<img alt="img" src="../img/Selecció_706.png" />  </p>
+<p>Comprovem amb <code>slapcat</code> que tot s'ha creat correctament.
+<img alt="img" src="../img/Selecció_707.png" />  </p>
+</blockquote>
+</blockquote>
+<h3 id="3-configuracio-dun-client-openldap">3 Configuració d'un client OpenLDAP</h3>
+<p><strong>3.1 Valida un client al domini</strong></p>
+<blockquote>
+<blockquote>
+<p>El primer pass es configura la xarxa del client donant-li una IP fixa hi ha la porta denllaç la IP del servidor.
+<img alt="img" src="../img/Selecció_708.png" />  </p>
+<p>Ara cal instal·lar els seguent paquets.
+<img alt="img" src="../img/Selecció_709.png" />  </p>
+<p>Configurem els paquets instal·lats anteriorment, ara indiquem la ip del servidor.
+<img alt="img" src="../img/Selecció_710.png" />  </p>
+<p>Indiquem el nom del domini creat al servidor.
+<img alt="img" src="../img/Selecció_711.png" />  </p>
+<p>Seleccionem la versió 3 de <code>LDAP</code>.
+<img alt="img" src="../img/Selecció_712.png" />  </p>
+<p>Deixem per defecte el metode dencriptació.
+<img alt="img" src="../img/Selecció_717.png" />  </p>
+<p>Seleccionem que volem establir el root local.
+<img alt="img" src="../img/Selecció_713.png" />  </p>
+<p>Indiquem que no ens demane login a la <code>LDPA BD</code>.
+<img alt="img" src="../img/Selecció_714.png" />  </p>
+<p>Afegim el nom d'usuari per al root.
+<img alt="img" src="../img/Selecció_715.png" />  </p>
+<p>Afegim una contrasenya per al root.
+<img alt="img" src="../img/Selecció_716.png" />  </p>
+<p>Ara editem l'arxiu <code>/etc/snnwitch.conf</code> i afegim <code>ldap</code> despres de compat tal com surt a la següent captura.
+<img alt="img" src="../img/Selecció_718.png" />  </p>
+<p>Ara editem l'arxiu <code>/etc/pam.d/common-session</code> i canviem el umaks amb <code>umaks=077</code>.
+<img alt="img" src="../img/Selecció_719.png" />  </p>
+<p>Ara editem l'arxiu <code>/etc/pam.d/common-password</code> i borrem el camp seleccionat a la captura <code>use_authok</code>.
+<img alt="img" src="../img/Selecció_720.png" />  </p>
+<p>Ara editem l'arxiu <code>/usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf</code> i afegim <code>greeter-show-manual-login=true</code>.
+<img alt="img" src="../img/Selecció_721.png" />  </p>
+<p>Reiniciem l'ordinador i ja ens podrem logejar amb l'usuari creat anteriorment dins de OpenLDAP.<br />
+<img alt="img" src="../img/Selecció_722.png" />  </p>
+</blockquote>
+</blockquote>
+<h3 id="4-esquema-referent-a-ldap">4 Esquema referent a LDAP</h3>
+<p><strong>4.1 Cerca la informació referent als esquemes del LDAP que hem utilitzat quan hem creat la uo, el grup i l'usuari</strong></p>
+<h3 id="5-atributs-obligatoris-i-opcionals">5 Atributs Obligatoris i Opcionals</h3>
+<p><strong>5.1 Quins són els atributs obligatoris i els opcionals per a les classes que hem treballat?</strong></p>
+<blockquote>
+<p>Arxiu de grup.<br />
+<img alt="img" src="../img/Selecció_703.png" />  </p>
+<pre><code>`posixGroup`
+    Atributs Obligatoris:
+        cn $ gidNumber
+    Atributs Opcionals:
+        userPassword $ memberUid $ member $ description
+
+`top`
+    Atributs Obligatoris:
+        member $ cn
+    Atributs Opcionals:
+        businessCategory $ seeAlso $ owner $ ou $ o $ description
+</code></pre>
+<blockquote>
+<p>Arxiu de UO.<br />
+<img alt="img" src="../img/Selecció_704.png" />  </p>
+</blockquote>
+<pre><code>`organizationalUnit`
+    Atributs Obligatoris:
+        ou
+    Atributs Opcionals:
+        userPassword $ searchGuide $ seeAlso $ businessCategory $ x121Address $ registeredAddress $ destinationIndicator $
+        preferredDeliveryMethod $ telexNumber $ teletexTerminalIdentifier $ telephoneNumber $ internationaliSDNNumber $
+        facsimileTelephoneNumber $ street $ postOfficeBox $ postalCode $ postalAddress $ physicalDeliveryOfficeName $ st $ l $ description
+
+`top`
+    Atributs Obligatoris:
+        member $ cn
+    Atributs Opcionals:
+        businessCategory $ seeAlso $ owner $ ou $ o $ description
+</code></pre>
+<blockquote>
+<p>Arxiu d'usuaris.<br />
+<img alt="img" src="../img/Selecció_705.png" />  </p>
+</blockquote>
+<pre><code>`inetOrgPerson`
+    Atributs Obligatoris:
+        -
+    Atributs Opcionals:
+        audio $ businessCategory $ carLicense $ departmentNumber $ displayName $ employeeNumber $ employeeType $ givenName $ homePhone $
+        homePostalAddress $ initials $ jpegPhoto $ labeledURI $ mail $ manager $ mobile $ o $ pager $ photo $ roomNumber $ secretary $
+        uid $ userCertificate $ x500uniqueIdentifier $ preferredLanguage $ userSMIMECertificate $ userPKCS12
+
+`organizationalPerson`
+    Atributs Obligatoris:
+        -
+    Atributs Opcionals:
+        title $ x121Address $ registeredAddress $ destinationIndicator $ preferredDeliveryMethod $ telexNumber $
+        teletexTerminalIdentifier $ telephoneNumber $ internationaliSDNNumber $ facsimileTelephoneNumber $ street $ postOfficeBox $
+        postalCode $ postalAddress $ physicalDeliveryOfficeName $ ou $ st $ l
+
+
+`person`
+    Atributs Obligatoris:
+        -
+    Atributs Opcionals:
+        businessCategory $ x121Address $ registeredAddress $ destinationIndicator $ preferredDeliveryMethod $ telexNumber $
+        teletexTerminalIdentifier $ telephoneNumber $ internationaliSDNNumber $ facsimileTelephoneNumber $ street $
+        postOfficeBox $ postalCode $ postalAddress $ physicalDeliveryOfficeName $ st $ l
+
+`posixAccount`
+    Atributs Obligatoris:
+        cn $ uid $ uidNumber $ gidNumber $ homeDirectory
+    Atributs Opcionals:
+        userPassword $ loginShell $ gecos $ description
+
+`shadowAccount`
+    Atributs Obligatoris:
+        uid
+    Atributs Opcionals:
+        userPassword $ shadowLastChange $ shadowMin $ shadowMax $ shadowWarning $ shadowInactive $ shadowExpire $ shadowFlag $ description
+
+`top`
+    Atributs Obligatoris:
+        member $ cn
+    Atributs Opcionals:
+        businessCategory $ seeAlso $ owner $ ou $ o $ description
+</code></pre>
+</blockquote>
+<h3 id="6-encriptacio-de-contrasenya-en-arxius-ldif">6 Encriptacio de contrasenya en arxius LDIF</h3>
+<p><strong>6.1 Com ho faries per tal de crear un usuari amb un fitxer ldifi que el camp userPassword estés encriptat amb md5?</strong></p>
+<blockquote>
+<p>En primer lloc encriptem la contrasenya mab <code>slappasswd -h {md5}</code> i accedim la contrasenya.
+<img alt="img" src="../img/Selecció_725.png" />  </p>
+<p>Ara afegim la contrasenya a l'apartat <code>userPassword</code> que hem obtingut avanç al arxiu ldif<br />
+<img alt="img" src="../img/Selecció_726.png" />  </p>
+<p>Carreguem l'arxiu on hem afegit la contrasena encriptada anteriorment.
+<img alt="img" src="../img/Selecció_727.png" />  </p>
+<p>Comprovem que podem accedir amb l'usuari creat anteriorment amb la contrasenya encriptada.
+<img alt="img" src="../img/Selecció_728.png" />  </p>
+<p>Comprovem que esta enciptada amb <code>slapcat</code>.
+<img alt="img" src="../img/Selecció_729.png" />  </p>
+</blockquote>
+<h3 id="7-estructura-jerarquica-de-classes-ldap">7 Estructura jeràrquica de classes LDAP</h3>
+<p><strong>7.1 Cerca algun esquema de tota l'estructura jeràrquica de classes del LDAP</strong>
+<img alt="img" src="../img/Selecció_733.png" />  </p>
+<h3 id="8-estructura-de-la-comanda-ldapadd">8 Estructura de la comanda ldapadd</h3>
+<p><strong>8.1 Quan afegeixes un objecte al directori amb la comanda ldapadd es posen diversos paràmetres, explica per a què serveix cadascun d'ells</strong></p>
+<blockquote>
+<p><strong>-X</strong></p>
+<pre><code>Utilitzem l'autenticació simple en lloc de SASL.
+</code></pre>
+<p><strong>-c</strong> </p>
+<pre><code>Mode de funcionament continu per reporten errors
+i poder veurels.
+</code></pre>
+<p><strong>-D</strong></p>
+<pre><code>Utilitzeu el Nom distingit binddn per unir-vos al directori LDAP. 
+Per al vincle SASL, s'espera que el servidor ignori aquest valor.
+</code></pre>
+<p><strong>"ruta completa de l'usuari admin"</strong></p>
+<p><strong>-W</strong></p>
+<pre><code>Sol·liciteu una autenticació senzilla. 
+Això s’utilitza en lloc d’especificar la contrasenya a la línia d’ordres.
+</code></pre>
+<p>-f</p>
+<pre><code>Llegir l'informació de modificació d’entrada del fitxer
+en comptes d’introduir l’entrada normal.
+</code></pre>
+</blockquote>
+<h3 id="9-habilitar-caracter-als-arxius-ldif">9 Habilitar caracter als arxius LDIF</h3>
+<p><strong>9.1 Com ho faries per tal de poder fer ús d'accents i altres caràcters dintre dels fitxers ldif?</strong></p>
+<blockquote>
+<p>Afegim els accents o altres caracter a l'arxiu ldif.
+<img alt="img" src="../img/Selecció_730.png" />  </p>
+<p>Ara executem la comanda <code>iconv -f iso-8859-1 -t utf-8 su.ldif</code> per a que canvie el tipus de caracters.
+<img alt="img" src="../img/Selecció_731.png" />  </p>
+<p>Comprovem que els accents els accepta, es mostren i apart podem accedir amb el nou usuari creat.<br />
+<img alt="img" src="../img/Selecció_732.png" />  </p>
+</blockquote>
+<h3 id="10-importancia-de-lordre-als-atributs">10 Importancia de l'ordre als atributs</h3>
+<p><strong>10.1 Importa l'ordre dels atributs quan definim un objecte dintre d'un fitxer ldif?</strong></p>
+<blockquote>
+<p>El ordre dins de l'arxiu ldif si que importa ja que té que cumplir el diseny de l'arbre d'informació de directoris <a href="https://en.wikipedia.org/wiki/Directory_information_tree">(DIT)</a>, també cal complir algunes normes generals:</p>
+</blockquote>
+<ul>
+<li>Separa els elements amb una linia en blanc.  </li>
+<li>Enumera els elements secundaris desprès dels primers.  </li>
+<li>Tenen que existir en el esquema elemnts com atributs o classes d'objectes, en cas de no existir s'auran danyadiral esquema per poder utilitzar-ho.  </li>
+</ul>
               
             </div>
           </div>
