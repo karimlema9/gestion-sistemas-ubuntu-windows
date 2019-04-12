@@ -85,6 +85,21 @@
         </ul>
     
 
+    <li class="toctree-l2"><a href="#configuracio-dentorns-grafics-per-a-ldap">Configuració d'entorns grafics per a LDAP</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#1-configuracio-de-apache-directory-studio">1 Configuració de Apache Directory Studio</a></li>
+        
+            <li><a class="toctree-l3" href="#2-configuracio-de-jxplorer">2. Configuració de Jxplorer</a></li>
+        
+            <li><a class="toctree-l3" href="#3-configuracio-de-phpldapadmin">3. Configuració de Phpldapadmin</a></li>
+        
+            <li><a class="toctree-l3" href="#4-configuracio-de-ldap-account-manager">4. Configuració de LDAP Account Manager</a></li>
+        
+        </ul>
+    
+
     </ul>
 	    </li>
           
@@ -363,6 +378,142 @@ en comptes d’introduir l’entrada normal.
 <li>Enumera els elements secundaris desprès dels primers.  </li>
 <li>Tenen que existir en el esquema elemnts com atributs o classes d'objectes, en cas de no existir s'auran danyadiral esquema per poder utilitzar-ho.  </li>
 </ul>
+<h2 id="configuracio-dentorns-grafics-per-a-ldap">Configuració d'entorns grafics per a LDAP</h2>
+<h3 id="1-configuracio-de-apache-directory-studio">1 Configuració de Apache Directory Studio</h3>
+<blockquote>
+<p><code>1.1</code>Primer baixem el paquet de <code>Apache Directory</code> compatible amb el nostre SO.
+<img alt="img" src="../img/Selecció_751.png" />  </p>
+<p><code>1.2</code>Ara cal instal·lar el pauqet <code>default-jre</code>.
+<img alt="img" src="../img/Selecció_752.png" />  </p>
+<p><code>1.3</code>Ara fem doble clik sobre l'executable de <code>Apache Directory</code> i afegim el Servidor LDAP, amb <code>New Connection</code>.
+<img alt="img" src="../img/Selecció_757.png" />  </p>
+<p><code>1.4</code>Indiquem el nom de la connexió, el nom de l'equip i el port per defecte de LDAP.
+<img alt="img" src="../img/Selecció_753.png" />  </p>
+<p><code>1.5</code>Ara afegim la ruta de l'usuari admin de LDAP i també indiquem la contrasenya.
+<img alt="img" src="../img/Selecció_756.png" />  </p>
+<p><code>1.6</code>Seguidament ens tornara a demanar el port i a més ens fara indica la IP del servidor.
+<img alt="img" src="../img/Selecció_755.png" />  </p>
+<p><code>1.7</code>Ara carreguem l'arxiu de dades <code>mesdades.ldif</code> per comandes.
+<img alt="img" src="../img/Selecció_758.png" />  </p>
+<p><code>1.8</code>Comprovem que s'ha creat correctament.
+<img alt="img" src="../img/Selecció_759.png" />  </p>
+<p><code>1.9</code>Creem una nova <code>Entry</code>.<br />
+<img alt="img" src="../img/Selecció_760.png" />  </p>
+<p><code>1.10</code>Seleccionem la primera opció.<br />
+<img alt="img" src="../img/Selecció_761.png" />  </p>
+<p><code>1.11</code>Afegim les object class oportunes a una nova <code>OU</code>.
+<img alt="img" src="../img/Selecció_762.png" />  </p>
+<p><code>1.12</code>Indiquem la ruta pare i el nom de la <code>OU</code> asix.
+<img alt="img" src="../img/Selecció_763.png" />  </p>
+<p><code>1.13</code>Comprovem que s'ha creat els object class.
+<img alt="img" src="../img/Selecció_764.png" />  </p>
+<p><code>1.14</code>Ja podem observa que s'ha creat la <code>OU</code> correctament.
+<img alt="img" src="../img/Selecció_765.png" />  </p>
+<p><code>1.15</code>Ara creem els object class per ha un nou usuari.
+<img alt="img" src="../img/Selecció_766.png" />  </p>
+<p><code>1.16</code>Omplim amb informació adient els valors dels object class.
+<img alt="img" src="../img/Selecció_768.png" />  </p>
+<p><code>1.17</code>Podem comprovar que s'ha creat l'usuari correctament.
+<img alt="img" src="../img/Selecció_770.png" />  </p>
+<p><code>1.18</code>Finalment accedim amb el client amb l'usuari creat anteriorment <code>Joan</code>.
+<img alt="img" src="../img/Selecció_781.png" />  </p>
+</blockquote>
+<h3 id="2-configuracio-de-jxplorer">2. Configuració de Jxplorer</h3>
+<blockquote>
+<p><code>2.1</code>Instal·lem el paquet jxplorer i l'executem quan acave.
+<img alt="img" src="../img/Selecció_771.png" />  </p>
+<p><code>2.2</code>Primer configurem jxplorer per a que obtingue les dades de LDAP amb la IP fixa del servidor la ruta de l'admin i la contrasenya.
+<img alt="img" src="../img/Selecció_783.png" />  </p>
+<p><code>2.3</code>Ara procedim a crear un nou usuari de nom <code>name</code>, primer afegim els Object Class.
+<img alt="img" src="../img/Selecció_773.png" />  </p>
+<p><code>2.4</code>Comprovem que l'usuari s'ha creat correctament.
+<img alt="img" src="../img/Selecció_784.png" />  </p>
+<p><code>2.5</code>Ara accedim des de l'usuari de LDAP.
+<img alt="img" src="../img/Selecció_782.png" />  </p>
+</blockquote>
+<h3 id="3-configuracio-de-phpldapadmin">3. Configuració de Phpldapadmin</h3>
+<blockquote>
+<p><code>3.1</code>Primer instal·lem el paquet de phpldapadmin.
+<img alt="img" src="../img/Selecció_776.png" />  </p>
+<p><code>3.2</code>Ara cal editar algunes linies de l'arxiu <code>/usr/share/phpldapadmin/lib/functions.php</code>, a la linia 54 cal afegir <code>my_</code> davant de autoload.
+<img alt="img" src="../img/Selecció_780.png" />  </p>
+<p><code>3.3</code>Ara a la linia 1083 copiem el seguent text
+</p>
+</blockquote>
+<pre><code>function __create_function($arg, $body) {
+static $cache = array();
+static $maxCacheSize = 64;
+static $sorter;
+
+if ($sorter === NULL) {
+    $sorter = function($a, $b) {
+        if ($a-&gt;hits == $b-&gt;hits) {
+            return 0;
+        }
+
+        return ($a-&gt;hits &lt; $b-&gt;hits) ? 1 : -1;
+    };
+}
+
+$crc = crc32($arg . "\\x00" . $body);
+
+if (isset($cache[$crc])) {
+    ++$cache[$crc][1];
+    return $cache[$crc][0];
+}
+
+if (sizeof($cache) &gt;= $maxCacheSize) {
+    uasort($cache, $sorter);
+    array_pop($cache);
+}
+
+$cache[$crc] = array($cb = eval('return 
+function('.$arg.'){'.$body.'};'), 0);
+    return $cb;
+}
+</code></pre>
+<blockquote>
+<p><code>3.4</code>També a l'arxiu <code>/etc/phpldapadmin/config.php</code> cal canviar dc=example per el nom del servidor LDAP.
+<img alt="img" src="../img/Selecció_777.png" /><br />
+<img alt="img" src="../img/Selecció_778.png" />  </p>
+<p><code>3.5</code>Comprovem que ens mostra l'estructura.
+<img alt="img" src="../img/Selecció_779.png" />  </p>
+<p><code>3.6</code>Creen un nou objecte i seleccionem <code>usuari</code>.
+<img alt="img" src="../img/Selecció_786.png" />  </p>
+<p><code>3.7</code>Omplim les dades necessaries de l'usuari.
+<img alt="img" src="../img/Selecció_787.png" />  </p>
+<p><code>3.8</code>Comprovem que s'ha creat correctament l'usuari.
+<img alt="img" src="../img/Selecció_788.png" />  </p>
+<p><code>3.9</code>Ara accedim amb l'usuari LDAP per comprovar que tot funciona correctamen.
+<img alt="img" src="../img/Selecció_789.png" />  </p>
+</blockquote>
+<h3 id="4-configuracio-de-ldap-account-manager">4. Configuració de LDAP Account Manager</h3>
+<blockquote>
+<p><code>4.1</code>Primer instal·lem el paquet <code>ldap-account-manager</code>
+<img alt="img" src="../img/Selecció_790.png" />  </p>
+<p><code>4.2</code>Ara accedim a <code>localhost/lam</code> i anem a la part superior dreta a la configuració.
+<img alt="img" src="../img/Selecció_791.png" />  </p>
+<p><code>4.3</code>Seguim i seleccionem <code>Editar perfils</code>.<br />
+<img alt="img" src="../img/Selecció_792.png" />  </p>
+<p><code>4.4</code>Accedim amb lam/lam.
+<img alt="img" src="../img/Selecció_793.png" />  </p>
+<p><code>4.5</code>I configurem el nom del servidor LDAP.
+<img alt="img" src="../img/Selecció_794.png" />  </p>
+<p><code>4.6</code>També configurem la ruta de l'admin.
+<img alt="img" src="../img/Selecció_795.png" />  </p>
+<p><code>4.7</code>I dins de tipos de perfils tambe indiquem eln nom del servidor LDAP.
+<img alt="img" src="../img/Selecció_798.png" />  </p>
+<p><code>4.8</code>Podem comprovar que ja surt l'esquema.<br />
+<img alt="img" src="../img/Selecció_796.png" />  </p>
+<p><code>4.9</code>Anem a usuari i seleccionem nou usurai.
+<img alt="img" src="../img/Selecció_797.png" />  </p>
+<p><code>4.10</code>Creem l'usuari amb el nom i els UID.
+<img alt="img" src="../img/Selecció_801.png" />  </p>
+<p><code>4.12</code>Establim una contraasenya al nou usuari.
+<img alt="img" src="../img/Selecció_802.png" />  </p>
+<p><code>4.13</code>I ja podem comprovar amb l'usuari LDAP que podim accedir.
+<img alt="img" src="../img/Selecció_803.png" />  </p>
+</blockquote>
               
             </div>
           </div>
